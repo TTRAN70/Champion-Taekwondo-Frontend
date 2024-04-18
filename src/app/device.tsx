@@ -4,6 +4,8 @@ import Image from "next/image";
 import { staat } from "@/app/fonts";
 import { NavLinks, MobileSideBar } from "@/app/nav-links";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 export default function Device() {
   return (
@@ -15,14 +17,27 @@ export default function Device() {
 }
 
 export function Desktop() {
+  const path = usePathname();
   return (
     <>
       <div className="hidden xl:flex justify-center items-center gap-x-7">
-        <div className={`${staat.className} text-white text-4xl`}>Champion</div>
+        <div
+          className={clsx(`${staat.className} text-4xl`, {
+            "text-black": path == "/",
+            "text-white": path != "/",
+          })}
+        >
+          Champion
+        </div>
         <div>
           <Image src="/ctkdlogo.png" width={100} height={100} alt="CTKD Logo" />
         </div>
-        <div className={`${staat.className} text-white text-4xl`}>
+        <div
+          className={clsx(`${staat.className} text-4xl`, {
+            "text-black": path == "/",
+            "text-white": path != "/",
+          })}
+        >
           Taekwondo
         </div>
       </div>
@@ -33,16 +48,28 @@ export function Desktop() {
 
 export function Mobile() {
   const [isOpened, setOpen] = useState<boolean>(false);
+  const path = usePathname();
   return (
     <>
       {isOpened && (
         <div className="block xl:hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"></div>
       )}
       <MobileSideBar isOpened={isOpened} setOpen={setOpen} />
-      <div className="flex xl:hidden justify-center items-center bg-[#5C5C5C]/[.3] self-center rounded-full">
+      <div
+        className={clsx(
+          "flex xl:hidden justify-center items-center self-center rounded-full",
+          {
+            "bg-[#5C5C5C]/[.3]": path != "/",
+            "bg-[#f1f5f9]": path == "/",
+          }
+        )}
+      >
         <button
           onClick={() => setOpen(true)}
-          className="navbar-burger flex items-center text-white p-3"
+          className={clsx("navbar-burger flex items-center p-3", {
+            "text-white": path != "/",
+            "text-black": path == "/",
+          })}
         >
           <svg
             className="block h-5 w-5 fill-current"
@@ -55,10 +82,17 @@ export function Mobile() {
         </button>
       </div>
       <div className="flex xl:hidden items-center ml-6 md:ml-10">
-        <div className={`${staat.className} text-white text-3xl md:text-4xl`}>
+        <div
+          className={clsx(`${staat.className} text-3xl md:text-4xl`, {
+            "text-black": path == "/",
+            "text-white": path != "/",
+          })}
+        >
           Champion Taekwondo
         </div>
       </div>{" "}
     </>
   );
 }
+
+//210 40% 96.1%;

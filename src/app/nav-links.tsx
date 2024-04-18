@@ -26,13 +26,27 @@ export function NavLinks() {
   const path = usePathname();
   let [activeTab, setActiveTab] = useState<string>(path);
   return (
-    <div className="hidden xl:flex bg-[#5C5C5C]/[.3] justify-center items-center self-center xl:mx-auto 2xl:ml-28 py-2 px-8 rounded-full">
+    <div
+      className={clsx(
+        "hidden xl:flex justify-center items-center self-center xl:mx-auto 2xl:ml-28 py-2 px-8 rounded-full",
+        {
+          "bg-[#5C5C5C]/[.3]": path != "/",
+          "bg-[#5C5C5C]/[.1]": path == "/",
+        }
+      )}
+    >
       {links.map((link) => {
         return (
           <Link
             key={link.name}
             href={link.href}
-            className={`${inter.className} relative rounded-full px-3 py-1.5 text-white xl:text-xl lg:text-lg font-bold`}
+            className={clsx(
+              `${inter.className} relative rounded-full px-3 py-1.5 xl:text-xl lg:text-lg font-bold`,
+              {
+                "text-black": activeTab != link.href && path == "/",
+                "text-white": activeTab == link.href || path != "/",
+              }
+            )}
             onClick={() => setActiveTab(link.href)}
           >
             {link.name}
