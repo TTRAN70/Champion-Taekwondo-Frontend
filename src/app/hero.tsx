@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="h-[40rem] sm:h-[50rem] relative rounded-[2rem] sm:rounded-[5rem] overflow-hidden flex items-center">
+    <div className="h-[40rem] sm:h-[50rem] relative rounded-[2rem] sm:rounded-[5rem] overflow-hidden flex items-center justify-center lg:justify-normal">
       <Image
         src="/Landing1.jpg"
         fill
@@ -15,21 +15,21 @@ export default function Hero() {
         }}
         alt="Landing page image"
       />
-      <div className="px-2 sm:px-0 flex flex-col text-white md:pl-44 gap-y-6 lg:w-[60%] md:w-[80%]">
+      <div className="px-2 sm:px-0 flex flex-col text-white lg:pl-44 gap-y-6 lg:w-[60%] md:w-[80%]">
         <div
-          className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center sm:text-left text-3xl md:text-6xl font-medium`}
+          className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center lg:text-left text-3xl md:text-6xl font-medium`}
         >
-          Welcome, to our GROWING FAMILY
+          Welcome, to our growing family
         </div>
         <div
-          className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center sm:text-left text-md md:text-lg font-normal md:w-[80%]`}
+          className={`${inter.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center lg:text-left text-md font-normal`}
         >
           With friendly and exciting classes for all age groups, fitness levels,
-          and for fun or serious training… We are the Tae Kwon Do family for
+          and for fun or serious training...we are the Tae Kwon Do family for
           you!
         </div>
         <div
-          className={`${inter.className} self-center sm:self-auto text-lg sm:text-xl font-bold bg-[#4583E1] w-[210px] rounded-full`}
+          className={`${inter.className} self-center lg:self-auto text-lg sm:text-xl font-bold bg-[#4583E1] w-[210px] rounded-full`}
         >
           <Link href="/join">
             <div className="flex items-center justify-center px-3 py-3 sm:px-5 sm:py-4">

@@ -36,28 +36,34 @@ const imageStyles = {
 
 export default function Skills() {
   return (
-    <div className="flex items-center mt-36 justify-center ml-12">
-      <div className="flex flex-col w-[27rem] gap-y-7">
-        <div className={`${josefin.className} text-tkdblue text-lg font-bold`}>
+    <div className="flex flex-col xl:flex-row items-center mt-20 xl:mt-32 justify-center xl:ml-12">
+      <div className="flex flex-col sm:w-[27rem] gap-y-7 mb-20 xl:mb-0">
+        <div
+          className={`${josefin.className} text-center xl:text-left text-tkdblue text-lg font-bold`}
+        >
           LEARN FROM A GRANDMASTER
         </div>
-        <div className={`${josefin.className} text-black text-7xl font-bold`}>
+        <div
+          className={`${josefin.className} text-center xl:text-left text-black text-4xl sm:text-7xl font-bold self-center sm:self-auto`}
+        >
           GAIN VALUABLE SKILLS
         </div>
-        <p className={`${inter} text-[#7B7878] text-lg font-medium`}>
+        <p
+          className={`${inter.className} text-[#7B7878] text-center xl:text-left text-md sm:text-lg font-medium w-[90%] sm:w-[100%] self-center sm:self-auto`}
+        >
           Unlock the power within you through the ancient art of Taekwondo.
           We&apos;re dedicated to fostering discipline, strength, and resilience
           through our time-honored training methods.
         </p>
       </div>
-      <div className="grid justify-center gap-4 lg:grid-cols-2 xl:grid-cols-4 ml-7">
+      <div className="grid justify-center gap-4 sm:grid-cols-2 2xl:grid-cols-4 xl:ml-7">
         {skills.map((skill) => {
           return (
             <div
-              className="relative bg-altgrey rounded-[30px]"
+              className="relative bg-altgrey rounded-[30px] pt-1 pl-1 overflow-hidden"
               key={skill.title}
             >
-              <div className="flex h-[300px] flex-col p-5 gap-y-7">
+              <div className="flex h-[260px] sm:h-[300px] flex-col p-5 gap-y-2">
                 <Image
                   src={skill.pic}
                   alt="Dumbell icon"
@@ -65,7 +71,7 @@ export default function Skills() {
                   height={70}
                   style={imageStyles}
                 ></Image>
-                <div className={`${josefin.className} text-2xl font-bold`}>
+                <div className={`${josefin.className} text-2xl font-bold mt-2`}>
                   {skill.title}
                 </div>
                 <p className={`${inter} text-[#7B7878] text-md font-medium`}>
