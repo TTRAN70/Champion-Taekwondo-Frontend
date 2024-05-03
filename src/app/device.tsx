@@ -82,17 +82,8 @@ export function Mobile() {
         </button>
       </div>
       <div className="flex xl:hidden items-center ml-6 md:ml-10">
-        <div
-          className={clsx(`${staat.className} text-3xl md:text-4xl`, {
-            "text-black": path == "/",
-            "text-white": path != "/",
-          })}
-        >
-          Champion Taekwondo
-        </div>
+        <Image src="/ctkdlogo.png" width={50} height={50} alt="CTKD Logo" />
       </div>{" "}
     </>
   );
 }
-
-//210 40% 96.1%;

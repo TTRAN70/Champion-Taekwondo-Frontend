@@ -118,7 +118,7 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
             <Link
               key={link.name}
               href={link.href}
-              className={clsx("p-3 hover:text-gray-700", {
+              className={clsx("p-3 text-gray-700 hover:text-black", {
                 "bg-[#0065FF] rounded-full py-1 my-1 px-5": path == link.href,
               })}
               onClick={() => setOpen(false)}
