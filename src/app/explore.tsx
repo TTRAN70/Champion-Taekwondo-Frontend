@@ -131,11 +131,11 @@ export default function Explore() {
           <h2
             className={`${josefin.className} text-black text-2xl sm:text-5xl font-bold z-40`}
           >
-            Your Journey Starts Here
+            WHERE WE BEGIN
           </h2>
         </div>
         {loaded && instanceRef.current && (
-          <div className="flex items-center justify-end gap-x-3 mt-3 z-40">
+          <div className="flex items-center gap-x-3 mt-5 z-40">
             <Arrow
               left
               onClick={(e: any) =>
@@ -161,15 +161,15 @@ export default function Explore() {
               <motion.div
                 key={elem.title}
                 whileTap={{}}
-                whileHover={{ translateY: -3, transition: { duration: 0.3 } }}
+                whileHover={{ translateY: -10, transition: { duration: 0.3 } }}
                 transition={{
                   duration: 0.3, // duration time when mouse leaves the element
                 }}
               >
-                <div className="keen-slider__slide h-[32rem] relative rounded-[1rem] group hover:cursor-pointer hover:shadow-lg">
-                  <div className="flex flex-col h-full bg-white group-hover:bg-[#4790FF]">
+                <div className="keen-slider__slide h-[32rem] relative rounded-[2rem] group hover:cursor-pointer hover:shadow-lg">
+                  <div className="flex flex-col h-full bg-white">
                     <h2
-                      className={`${inter.className} transition-all ease-in-out duration-200 text-black group-hover:border-0 group-hover:text-white text-xl font-bold mt-6 mx-6 py-1 px-3 rounded-full border-0 border-black w-max`}
+                      className={`${inter.className} transition-all ease-in-out duration-200 text-black group-hover:border-0 group-hover:bg-[#4790FF] group-hover:text-white text-xl font-bold mt-6 mx-6 py-1 px-3 rounded-full border-0 border-black w-max`}
                     >
                       {elem.title}
                     </h2>
@@ -185,16 +185,16 @@ export default function Explore() {
                       />
                     </div>
                     <p
-                      className={`${inter.className} transition-all ease-in-out duration-200 text-[#4E4E4E] group-hover:text-white text-md font-medium pt-2 px-6`}
+                      className={`${inter.className} transition-all ease-in-out duration-200 text-[#4E4E4E] text-md font-medium pt-2 px-6`}
                     >
                       {elem.subtitle}
                     </p>
                     <div
-                      className={`${inter.className} font-semibold transition ease-in-out duration-200 group-hover:text-white text-black absolute rounded-tr-lg text-center bottom-0 p-5`}
+                      className={`${inter.className} font-semibold transition ease-in-out duration-200 group-hover:text-[#4790FF] text-black absolute rounded-tr-lg text-center bottom-0 p-5`}
                     >
                       <Link href="/test">
                         View
-                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 group-hover:bg-white bg-black"></span>
+                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 group-hover:bg-white bg-[#4790FF]"></span>
                       </Link>
                     </div>
                   </div>
@@ -214,12 +214,12 @@ function Arrow(props: {
   onClick: (e: any) => void;
 }) {
   const disabled = props.disabled
-    ? "fill-gray-300 border-gray-300 cursor-not-allowed z-40"
-    : "fill-gray-700 border-gray-700 hover:fill-tkdblue hover:border-tkdblue z-40 cursor-pointer";
+    ? "fill-gray-300 transition duration-75 ease-in-out border-gray-300 cursor-not-allowed z-40"
+    : "fill-gray-700 border-gray-700 hover:fill-tkdblue hover:border-tkdblue transition duration-75 ease-in-out z-40 cursor-pointer";
   return (
     <svg
       onClick={props.onClick}
-      className={`z-40 w-14 h-14 p-2 border-[1px] rounded-full true:cursor-auto true:hidden ${
+      className={`z-40 w-10 h-10 p-2 border-[2px] rounded-full true:cursor-auto true:hidden ${
         props.left ? "left-20" : "left-auto right-20"
       } ${disabled}`}
       xmlns="http://www.w3.org/2000/svg"

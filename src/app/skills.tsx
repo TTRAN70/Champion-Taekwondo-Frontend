@@ -8,19 +8,19 @@ import { useRef } from "react";
 const skills = [
   {
     pic: "/dumbell.png",
-    title: "More Fit",
+    title: "Healthy Life",
     subtitle:
       "Build strength, flexibility, and cardiovascular endurance through our high-energy workouts",
   },
   {
     pic: "/tenacity.png",
-    title: "Healthy Mindset",
+    title: "Cognitive Ability",
     subtitle:
       "Develop focus, discipline, and determination that extend beyond the training mat and into everyday life",
   },
   {
     pic: "/community.png",
-    title: "New Community",
+    title: "Connections",
     subtitle:
       "Join a supportive community of like-minded individuals, creating friendships and belonging",
   },
@@ -91,7 +91,7 @@ export default function Skills() {
             <div
               className={`${josefin.className} text-center xl:text-left text-black text-4xl sm:text-7xl font-bold self-center sm:self-auto`}
             >
-              Achieve Your Benefits
+              GAIN VALUABLE SKILLS
             </div>
             <p
               className={`${inter.className} text-[#7B7878] text-center xl:text-left text-md sm:text-lg font-medium w-[90%] sm:w-[100%] self-center sm:self-auto`}
@@ -111,7 +111,7 @@ export default function Skills() {
                 return (
                   <motion.div key={skill.title} variants={item}>
                     <div
-                      className="relative rounded-[20px] p-3 overflow-hidden bg-white w-[20rem] h-[20rem]"
+                      className="relative rounded-[40px] p-3 overflow-hidden bg-white w-[20rem] h-[20rem]"
                       key={skill.title}
                     >
                       <div className="flex flex-col p-5 gap-y-2">

@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "Calendar", href: "/calendar" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Classes", href: "/classes" },
-  { name: "About", href: "/about" },
-  { name: "More", href: "/more" },
+  { name: "HOME", href: "/" },
+  { name: "CALENDAR", href: "/calendar" },
+  { name: "GALLERY", href: "/gallery" },
+  { name: "CLASSES", href: "/classes" },
+  { name: "ABOUT", href: "/about" },
+  { name: "MORE", href: "/more" },
 ];
 
 type Props = {
@@ -28,11 +28,8 @@ export function NavLinks() {
   return (
     <div
       className={clsx(
-        "hidden xl:flex justify-center items-center self-center xl:mx-auto 2xl:ml-28 py-2 px-8 rounded-full",
-        {
-          "bg-[#5C5C5C]/[.3]": path != "/",
-          "bg-[#5C5C5C]/[.1]": path == "/",
-        }
+        "hidden xl:flex justify-center items-center self-center xl:mx-auto 2xl:ml-32 py-2 px-8 rounded-full",
+        {}
       )}
     >
       {links.map((link) => {
@@ -41,7 +38,7 @@ export function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              `${inter.className} relative mx-1 transition ease-in-out duration-200 rounded-full px-3 py-1.5 xl:text-lg lg:text-lg font-bold`,
+              `${inter.className} relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
               {
                 "text-black hover:bg-gray-300":
                   activeTab != link.href && path == "/",
@@ -114,14 +111,14 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
             <Link
               key={link.name}
               href={link.href}
-              className={clsx("p-3 text-gray-700 hover:text-black", {
-                "bg-[#0065FF] rounded-full py-1 my-1 px-5": path == link.href,
+              className={clsx("p-3 text-black", {
+                "bg-[#0065FF] rounded-lg py-1 my-1 px-5": path == link.href,
               })}
               onClick={() => setOpen(false)}
             >
               <p
                 className={clsx(
-                  `${inter.className} sm:text-md md:text-lg font-bold`,
+                  `${inter.className} sm:text-md md:text-lg font-extrabold`,
                   {
                     "text-white": path == link.href,
                   }
