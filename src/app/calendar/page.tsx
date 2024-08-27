@@ -2,18 +2,15 @@ import Image from "next/image";
 
 export default function Calendar() {
   return (
-    <main className="min-h-screen px-10 bg-[#F3F4F6]">
-      <div className="font-bold mx-auto text-3xl py-10 flex justify-center">
-        Tentative Schedule
-      </div>
-      <div className="aspect-[3/4] xl:w-[50%] xl:h-[50%] relative mx-auto rounded-lg">
+    <main className="h-[50rem] px-10 bg-[#F3F4F6] relative">
+      <div className="max-w-[100%] max-h-[100vh] mx-auto rounded-lg">
         <Image
-          src="/calendar.png"
+          src="/calendar.jpg"
           fill
           alt="Calendar"
           style={{
             borderRadius: "10px",
-            paddingBottom: "60px",
+            objectFit: "contain",
           }}
         />
       </div>
