@@ -113,7 +113,7 @@ export default function Explore() {
         fill
         alt="explorebg"
         style={{
-          borderRadius: "10px",
+          borderRadius: "50px",
         }}
       />
       <motion.div

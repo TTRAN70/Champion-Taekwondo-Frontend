@@ -33,7 +33,7 @@ export default function Faq() {
         objectFit={"cover"}
         alt="faqbg"
         style={{
-          borderRadius: "10px",
+          borderRadius: "50px",
           zIndex: 0,
         }}
       />

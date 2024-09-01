@@ -7,11 +7,11 @@ export default function Footer() {
     <footer className="bg-black p-10">
       <div className="flex justify-evenly gap-y-5 flex-wrap">
         <div className="flex gap-x-10 gap-y-5 flex-wrap">
-          <div>
+          <div className="relative w-20 h-20 xl:w-24 xl:h-24">
             <Image
               src="/ctkdlogo.png"
-              width={100}
-              height={100}
+              fill
+              style={{ objectFit: "contain" }}
               alt="CTKD Logo"
             />
           </div>

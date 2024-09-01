@@ -10,7 +10,7 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
           return (
             <div
               key={elem.person}
-              className="basis-[30vw] p-8 bg-white rounded-lg flex flex-col justify-start relative"
+              className="basis-[30vw] p-8 bg-white rounded-lg flex flex-col justify-start relative border border-gray-300 hover:bg-altgrey hover:border-altgrey"
             >
               <p className={`${inter.className} self-start font-semibold`}>
                 <q>{elem.review}</q>
@@ -30,8 +30,13 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
                 />
                 <div className="font-bold">{elem.person}</div>
                 <div className="text-sm text-slate-700">{elem.title}</div>
-                <div className="right-5 bottom-8 absolute p-1 text-white bg-[#3C84FF] rounded-lg">
-                  <Image alt="stars" width={90} height={90} src="/stars.png" />
+                <div className="right-5 bottom-8 w-20 h-10 absolute p-1 text-white bg-[#3C84FF] rounded-lg">
+                  <Image
+                    alt="stars"
+                    fill
+                    style={{ objectFit: "contain" }}
+                    src="/stars.png"
+                  />
                 </div>
               </div>
             </div>

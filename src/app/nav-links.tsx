@@ -5,16 +5,33 @@ import { usePathname } from "next/navigation";
 import { inter } from "@/app/fonts";
 import { staat } from "@/app/fonts";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { useState } from "react";
+import Dropdown from "@/app/dropdown";
 
 const links = [
-  { name: "HOME", href: "/" },
-  { name: "CALENDAR", href: "/calendar" },
-  { name: "GALLERY", href: "/gallery" },
-  { name: "CLASSES", href: "/classes" },
-  { name: "ABOUT", href: "/about" },
-  { name: "MORE", href: "/more" },
+  { name: "HOME", href: "/", dropdown: false },
+  { name: "CALENDAR", href: "/calendar", dropdown: false },
+  { name: "GALLERY", href: "/gallery", dropdown: false },
+  {
+    name: "CLASSES",
+    href: "/classes",
+    dropdown: true,
+    expand: [
+      { name: "Kids", href: "/kidsctkd" },
+      { name: "Teens + Adults", href: "/teensadultsctkd" },
+      { name: "After School", href: "/afterschoolctkd" },
+    ],
+  },
+  { name: "ABOUT", href: "/about", dropdown: false },
+  {
+    name: "MORE",
+    href: "/more",
+    dropdown: true,
+    expand: [
+      { name: "Contact", href: "/contact" },
+      { name: "How to Join", href: "/howtojoin" },
+    ],
+  },
 ];
 
 type Props = {
@@ -33,26 +50,37 @@ export function NavLinks() {
       )}
     >
       {links.map((link) => {
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={clsx(
-              `${inter.className} relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
-              {
-                "text-black hover:bg-gray-300":
-                  activeTab != link.href && path == "/",
-                "text-white hover:bg-neutral-800 bg-[#0065FF]":
-                  activeTab == link.href,
-                "text-white hover:bg-neutral-800":
-                  activeTab != link.href && path != "/",
-              }
-            )}
-            onClick={() => setActiveTab(link.href)}
-          >
-            {link.name}
-          </Link>
-        );
+        if (link.dropdown) {
+          return (
+            <Dropdown
+              key={link.name}
+              activeTab={activeTab}
+              name={link.name}
+              data={link.expand}
+            />
+          );
+        } else {
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={clsx(
+                `${inter.className} relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
+                {
+                  "text-black hover:bg-altgrey":
+                    activeTab != link.href && path == "/",
+                  "text-white hover:bg-neutral-800 bg-[#0065FF]":
+                    activeTab == link.href,
+                  "text-white hover:bg-neutral-800":
+                    activeTab != link.href && path != "/",
+                }
+              )}
+              onClick={() => setActiveTab(link.href)}
+            >
+              {link.name}
+            </Link>
+          );
+        }
       })}
     </div>
   );
@@ -70,11 +98,11 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
           <div className={`${staat.className} text-black text-xl`}>
             Champion
           </div>
-          <div>
+          <div className="relative w-10 h-10">
             <Image
               src="/ctkdlogo.png"
-              width={30}
-              height={30}
+              fill
+              style={{ objectFit: "contain" }}
               alt="CTKD Logo"
               className="hidden min-[420px]:block"
             />
@@ -111,9 +139,12 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
             <Link
               key={link.name}
               href={link.href}
-              className={clsx("p-3 text-black", {
-                "bg-[#0065FF] rounded-lg py-1 my-1 px-5": path == link.href,
-              })}
+              className={clsx(
+                "p-3 text-black hover:bg-altgrey rounded-lg py-1 my-1 px-5",
+                {
+                  "bg-[#0065FF] hover:bg-[#0065FF]": path == link.href,
+                }
+              )}
               onClick={() => setOpen(false)}
             >
               <p

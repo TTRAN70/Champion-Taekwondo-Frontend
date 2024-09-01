@@ -111,7 +111,7 @@ export default function Skills() {
                 return (
                   <motion.div key={skill.title} variants={item}>
                     <div
-                      className="relative rounded-[40px] p-3 overflow-hidden bg-white w-[20rem] h-[20rem]"
+                      className="relative rounded-[40px] p-3 overflow-hidden border border-gray-300 hover:bg-altgrey hover:border-altgrey w-[20rem] h-[20rem]"
                       key={skill.title}
                     >
                       <div className="flex flex-col p-5 gap-y-2">

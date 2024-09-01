@@ -29,8 +29,13 @@ export function Desktop() {
         >
           Champion
         </div>
-        <div>
-          <Image src="/ctkdlogo.png" width={100} height={100} alt="CTKD Logo" />
+        <div className="relative w-20 h-20">
+          <Image
+            src="/ctkdlogo.png"
+            fill
+            style={{ objectFit: "contain" }}
+            alt="CTKD Logo"
+          />
         </div>
         <div
           className={clsx(`${staat.className} text-3xl`, {
@@ -81,8 +86,13 @@ export function Mobile() {
           </svg>
         </button>
       </div>
-      <div className="flex xl:hidden items-center ml-6 md:ml-10">
-        <Image src="/ctkdlogo.png" width={50} height={50} alt="CTKD Logo" />
+      <div className="flex xl:hidden self-center items-center ml-auto mr-[5%] sm:mr-[10%] relative w-14 h-14">
+        <Image
+          src="/ctkdlogo.png"
+          fill
+          style={{ objectFit: "contain" }}
+          alt="CTKD Logo"
+        />
       </div>{" "}
     </>
   );

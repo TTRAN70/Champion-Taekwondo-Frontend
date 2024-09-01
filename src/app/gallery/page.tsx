@@ -13,7 +13,7 @@ export default async function Gallery() {
     );
   return (
     <main className="min-h-screen px-5 sm:px-12">
-      <section className="px-2 my-3 grid gap-2 grid-cols-gallery">
+      <section className="px-1 my-3 grid grid-cols-gallery auto-rows-[10px]">
         {images.resources.map((photo) => (
           <ImgContainer photo={photo} />
         ))}
