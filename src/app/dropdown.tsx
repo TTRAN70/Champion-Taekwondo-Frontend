@@ -2,6 +2,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { inter } from "@/app/fonts";
 import clsx from "clsx";
 import Link from "next/link";
+
 type PropData = {
   name: string;
   href: string;
@@ -10,11 +11,11 @@ type PropData = {
 export default function Dropdown({
   data,
   name,
-  activeTab,
+  path,
 }: {
   data: PropData[] | undefined;
   name: string;
-  activeTab: string;
+  path: string;
 }) {
   return (
     <Menu>
@@ -22,8 +23,8 @@ export default function Dropdown({
         className={clsx(
           `${inter.className} data-[active]:bg-[#0065FF] data-[active]:text-white data-[open]:bg-[#0065FF] data-[open]:text-white relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
           {
-            "text-black hover:bg-altgrey": activeTab == "/",
-            "text-white hover:bg-neutral-800": activeTab != "/",
+            "text-black hover:bg-altgrey": path == "/",
+            "text-white hover:bg-neutral-800": path != "/",
           }
         )}
       >

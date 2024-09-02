@@ -7,6 +7,7 @@ import { staat } from "@/app/fonts";
 import Image from "next/image";
 import { useState } from "react";
 import Dropdown from "@/app/dropdown";
+import MobileDropdown from "@/app/mobiledropdown";
 
 const links = [
   { name: "HOME", href: "/", dropdown: false },
@@ -41,7 +42,6 @@ type Props = {
 
 export function NavLinks() {
   const path = usePathname();
-  let [activeTab, setActiveTab] = useState<string>(path);
   return (
     <div
       className={clsx(
@@ -54,7 +54,7 @@ export function NavLinks() {
           return (
             <Dropdown
               key={link.name}
-              activeTab={activeTab}
+              path={path}
               name={link.name}
               data={link.expand}
             />
@@ -68,14 +68,13 @@ export function NavLinks() {
                 `${inter.className} relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
                 {
                   "text-black hover:bg-altgrey":
-                    activeTab != link.href && path == "/",
+                    path != link.href && path == "/",
                   "text-white hover:bg-neutral-800 bg-[#0065FF]":
-                    activeTab == link.href,
+                    path == link.href,
                   "text-white hover:bg-neutral-800":
-                    activeTab != link.href && path != "/",
+                    path != link.href && path != "/",
                 }
               )}
-              onClick={() => setActiveTab(link.href)}
             >
               {link.name}
             </Link>
@@ -95,7 +94,9 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
     >
       <div className="flex items-center justify-between gap-x-2 border-b border-zinc-200 pb-5">
         <div className="flex items-center gap-x-1 min-[420px]:gap-x-2">
-          <div className={`${staat.className} text-black text-xl`}>
+          <div
+            className={`${staat.className} text-black text-md sm:text-lg lg:text-xl`}
+          >
             Champion
           </div>
           <div className="relative w-10 h-10">
@@ -104,10 +105,11 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
               fill
               style={{ objectFit: "contain" }}
               alt="CTKD Logo"
-              className="hidden min-[420px]:block"
             />
           </div>
-          <div className={`${staat.className} text-black text-xl`}>
+          <div
+            className={`${staat.className} text-black text-md sm:text-lg lg:text-xl`}
+          >
             Taekwondo
           </div>
         </div>
@@ -135,30 +137,42 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
       </div>
       <div className="flex flex-col mt-5">
         {links.map((link) => {
-          return (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={clsx(
-                "p-3 text-black hover:bg-altgrey rounded-lg py-1 my-1 px-5",
-                {
-                  "bg-[#0065FF] hover:bg-[#0065FF]": path == link.href,
-                }
-              )}
-              onClick={() => setOpen(false)}
-            >
-              <p
+          if (link.dropdown) {
+            return (
+              <MobileDropdown
+                key={link.name}
+                name={link.name}
+                data={link.expand}
+                isOpened={isOpened}
+                setOpen={setOpen}
+              />
+            );
+          } else {
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
                 className={clsx(
-                  `${inter.className} sm:text-md md:text-lg font-extrabold`,
+                  "p-3 text-black hover:bg-altgrey rounded-lg py-1 my-1 px-5",
                   {
-                    "text-white": path == link.href,
+                    "bg-[#0065FF] hover:bg-[#0065FF]": path == link.href,
                   }
                 )}
+                onClick={() => setOpen(false)}
               >
-                {link.name}
-              </p>
-            </Link>
-          );
+                <p
+                  className={clsx(
+                    `${inter.className} sm:text-md md:text-lg font-extrabold`,
+                    {
+                      "text-white": path == link.href,
+                    }
+                  )}
+                >
+                  {link.name}
+                </p>
+              </Link>
+            );
+          }
         })}
       </div>
     </div>
