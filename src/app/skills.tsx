@@ -8,27 +8,31 @@ import { useRef } from "react";
 const skills = [
   {
     pic: "/dumbell.png",
-    title: "Healthy Life",
+    title: "Healthier Life",
     subtitle:
-      "Build strength, flexibility, and cardiovascular endurance through our high-energy workouts",
+      "Reduce the hospital visits, build strength, flexibility, and cardiovascular endurance like never before",
+    alt: "dumbbell icon",
   },
   {
     pic: "/tenacity.png",
-    title: "Cognitive Ability",
+    title: "Mental Beast",
     subtitle:
-      "Develop focus, discipline, and determination that extend beyond the training mat and into everyday life",
+      "Conquer everything, develop focus, discipline, and determination that bleeds into your life",
+    alt: "bull in mind icon",
   },
   {
     pic: "/community.png",
     title: "Connections",
     subtitle:
-      "Join a supportive community of like-minded individuals, creating friendships and belonging",
+      "Make new friends, join a supportive community of like-minded individuals, creating friendships and belonging",
+    alt: "group of people",
   },
   {
     pic: "/fight.png",
     title: "Self-Defense",
     subtitle:
-      "Learn practical techniques to protect yourself and others so you can feel safe no matter where you are",
+      "Feel confident, learn practical techniques to protect yourself and others so you feel safe no matter what",
+    alt: "people fighting",
   },
 ];
 
@@ -91,7 +95,7 @@ export default function Skills() {
             <div
               className={`${josefin.className} text-center xl:text-left text-black text-4xl sm:text-7xl font-bold self-center sm:self-auto`}
             >
-              GAIN VALUABLE SKILLS
+              IMPROVE YOUR LIFE
             </div>
             <p
               className={`${inter.className} text-[#7B7878] text-center xl:text-left text-md sm:text-lg font-medium w-[90%] sm:w-[100%] self-center sm:self-auto`}
@@ -106,7 +110,7 @@ export default function Skills() {
             animate={inView ? "show" : "hidden"}
             ref={ref}
           >
-            <div className="grid justify-center gap-4 sm:grid-cols-2 true:grid-cols-4 xl:ml-7">
+            <div className="grid justify-center gap-4 md:grid-cols-2 xl:ml-7">
               {skills.map((skill) => {
                 return (
                   <motion.div key={skill.title} variants={item}>
@@ -117,7 +121,7 @@ export default function Skills() {
                       <div className="flex flex-col p-5 gap-y-2">
                         <Image
                           src={skill.pic}
-                          alt="Dumbell icon"
+                          alt={skill.alt}
                           width={70}
                           height={70}
                           style={imageStyles}
@@ -150,7 +154,7 @@ export default function Skills() {
         ></Image>
         <Image
           src="/kukilogo.png"
-          alt="World Taekwondo Logo"
+          alt="Kukkiwon Logo"
           width={100}
           height={100}
         ></Image>

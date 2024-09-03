@@ -11,7 +11,7 @@ export default function Cta() {
           <h2
             className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10`}
           >
-            Our Promises
+            Ready to Start?
           </h2>
           {ctaList.map((cta) => {
             return (

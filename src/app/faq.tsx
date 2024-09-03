@@ -31,7 +31,7 @@ export default function Faq() {
         src="/rt5.jpg"
         fill
         objectFit={"cover"}
-        alt="faqbg"
+        alt="Blue background with pattern"
         style={{
           borderRadius: "50px",
           zIndex: 0,
@@ -46,7 +46,7 @@ export default function Faq() {
             <p
               className={`${josefin.className} mt-3 text-white text-3xl font-bold sm:text-4xl`}
             >
-              ALL INFORMATION YOU NEED TO KNOW
+              Questions? We have them answered
             </p>
           </div>
         </div>

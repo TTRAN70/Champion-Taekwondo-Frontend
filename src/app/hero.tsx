@@ -12,7 +12,7 @@ export default function Hero() {
           objectFit: "cover",
           filter: "brightness(50%)",
         }}
-        alt="Landing page image"
+        alt="Students putting their hand over their chest"
       />
       <div className="px-10 flex flex-col text-white sm:items-start lg:px-44 gap-y-6">
         <div

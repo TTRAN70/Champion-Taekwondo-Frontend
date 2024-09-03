@@ -59,7 +59,7 @@ export default function MobileDropdown({
             >
               <p
                 className={clsx(
-                  `${inter.className} sm:text-md md:text-lg font-bold w-full pt-2 pr-2 pb-2 pl-4 rounded-lg my-1 active:bg-white focus:bg-white`
+                  `${inter.className} sm:text-md md:text-lg font-bold w-full pt-2 pr-2 pb-2 pl-4 rounded-lg my-1 hover:bg-white active:bg-white focus:bg-white`
                 )}
                 onClick={() => setOpen(false)}
               >

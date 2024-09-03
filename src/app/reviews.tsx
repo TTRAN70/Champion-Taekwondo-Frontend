@@ -5,6 +5,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import ReviewSlide from "@/app/reviewslide";
 import { review1, review2, review3 } from "@/app/lib/reviewdata";
+import { josefin } from "./fonts";
 
 export default function Reviews() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -32,7 +33,10 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="relative pt-5 pb-10">
+      <div className="relative pt-20 pb-10">
+        <h2 className={`font-bold ${josefin.className} text-3xl ml-5`}>
+          What our awesome students are saying
+        </h2>
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide">
             <ReviewSlide previews={review1} />

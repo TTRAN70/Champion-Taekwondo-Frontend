@@ -14,24 +14,28 @@ const classes = [
     title: "KIDS",
     subtitle:
       "Fun and engaging classes specially crafted for our young martial artists.",
+    alt: "Kids doing taekwondo form practice",
   },
   {
     pic: "/teentkd.jpg",
     title: "TEENS",
     subtitle:
       "Dynamic sessions designed to challenge and inspire teenagers, fostering discipline and confidence in a supportive environment.",
+    alt: "Teens in ready stance",
   },
   {
     pic: "/adult.jpg",
     title: "ADULTS",
     subtitle:
       "Tailored training that challenges and empowers adults of all abilities.",
+    alt: "Adults waiting for instruction",
   },
   {
     pic: "/afterschool.png",
     title: "AFTER SCHOOL",
     subtitle:
       "A safe and productive environment for kids to learn Taekwondo, complete their homework, and develop important life skills.",
+    alt: "Kids playing dodgeball",
   },
 ];
 
@@ -106,16 +110,7 @@ export default function Explore() {
     },
   };
   return (
-    <div className="h-[55rem] sm:h-[58rem] lg:h-[58rem] 2xl:h-[55rem] rounded-[3rem] px-10 xl:px-56 py-14 relative">
-      <Image
-        src="/tai4.jpg"
-        objectFit={"cover"}
-        fill
-        alt="explorebg"
-        style={{
-          borderRadius: "50px",
-        }}
-      />
+    <div className="h-[55rem] sm:h-[58rem] lg:h-[58rem] 2xl:h-[55rem] rounded-[3rem] px-10 xl:px-56 py-14 relative bg-altgrey">
       <motion.div
         variants={parent}
         initial="hidden"
@@ -126,12 +121,12 @@ export default function Explore() {
           <h3
             className={`${josefin.className} text-tkdblue text-sm sm:text-lg font-semibold z-40`}
           >
-            EXPLORE OUR PROGRAMS
+            OUR PROGRAMS
           </h3>
           <h2
             className={`${josefin.className} text-black text-2xl sm:text-5xl font-bold z-40`}
           >
-            WHERE WE BEGIN
+            Fun. Productive. Amazing.
           </h2>
         </div>
         {loaded && instanceRef.current && (
@@ -178,7 +173,7 @@ export default function Explore() {
                         src={elem.pic}
                         objectFit={"cover"}
                         fill
-                        alt="Landing page image"
+                        alt={elem.alt}
                         style={{
                           borderRadius: "10px",
                         }}
