@@ -146,25 +146,31 @@ export default function Skills() {
         </div>
       </motion.div>
       <div className="flex flex-col sm:flex-row gap-y-10 sm:gap-y-0 justify-center items-center gap-x-12 md:gap-x-24 mt-28 mb-28 sm:mr-8">
-        <Image
-          src="/wtlogo.png"
-          alt="World Taekwondo Logo"
-          width={100}
-          height={100}
-        ></Image>
-        <Image
-          src="/kukilogo.png"
-          alt="Kukkiwon Logo"
-          width={100}
-          height={100}
-        ></Image>
-        <Image
-          src="/kukilogo2.png"
-          alt="World Taekwondo Logo"
-          width={60}
-          height={60}
-          className="xl:ml-6"
-        ></Image>
+        <div className="relative w-28 h-28">
+          <Image
+            src="/wtlogo.png"
+            alt="World Taekwondo Logo"
+            fill
+            style={{ objectFit: "contain" }}
+          ></Image>
+        </div>
+        <div className="relative w-24 h-24">
+          <Image
+            src="/kukilogo.png"
+            alt="Kukkiwon Logo"
+            fill
+            style={{ objectFit: "contain" }}
+          ></Image>
+        </div>
+        <div className="relative w-16 h-16">
+          <Image
+            src="/kukilogo2.png"
+            alt="World Taekwondo Logo"
+            fill
+            style={{ objectFit: "contain" }}
+            className="xl:ml-6"
+          ></Image>
+        </div>
       </div>
     </>
   );

@@ -15,7 +15,7 @@ export default function KidsCTKD() {
           }}
           alt="Master Lee handing out medals and awards"
         />
-        <div className="text-white w-full h-96 bg-black absolute bg-[#4583E1]/75 flex items-center justify-center">
+        <div className="text-white w-full h-96 absolute bg-[#4583E1]/75 flex items-center justify-center">
           <div
             className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-3xl sm:text-5xl lg:text-7xl`}
           >
@@ -59,7 +59,10 @@ export default function KidsCTKD() {
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
             {kidsctkddata.map((elem) => {
               return (
-                <div className="relative overflow-hidden rounded-lg bg-background p-2">
+                <div
+                  className="relative overflow-hidden rounded-lg bg-background p-2"
+                  key={elem.title}
+                >
                   <div className="flex h-40 flex-col rounded-md p-5">
                     <Image
                       src={elem.src}
