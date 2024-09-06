@@ -17,21 +17,21 @@ const classes = [
     alt: "Kids doing taekwondo form practice",
   },
   {
-    pic: "/teentkd.jpg",
+    pic: "/teenctkd.jpg",
     title: "TEENS",
     subtitle:
       "Dynamic sessions designed to challenge and inspire teenagers, fostering discipline and confidence in a supportive environment.",
     alt: "Teens in ready stance",
   },
   {
-    pic: "/adult.jpg",
+    pic: "/adultctkd.jpg",
     title: "ADULTS",
     subtitle:
       "Tailored training that challenges and empowers adults of all abilities.",
     alt: "Adults waiting for instruction",
   },
   {
-    pic: "/afterschool.png",
+    pic: "/afterschoolctkd.jpg",
     title: "AFTER SCHOOL",
     subtitle:
       "A safe and productive environment for kids to learn Taekwondo, complete their homework, and develop important life skills.",
@@ -110,7 +110,7 @@ export default function Explore() {
     },
   };
   return (
-    <div className="h-[55rem] sm:h-[58rem] lg:h-[58rem] 2xl:h-[55rem] rounded-[3rem] px-10 xl:px-56 py-14 relative bg-altgrey">
+    <div className="h-[55rem] sm:h-[58rem] lg:h-[58rem] 2xl:h-[55rem] rounded-[3rem] px-10 xl:px-56 py-14 relative">
       <motion.div
         variants={parent}
         initial="hidden"
@@ -126,7 +126,7 @@ export default function Explore() {
           <h2
             className={`${josefin.className} text-black text-2xl sm:text-5xl font-bold z-40`}
           >
-            Fun. Productive. Amazing.
+            Fun. Productive. For You.
           </h2>
         </div>
         {loaded && instanceRef.current && (
@@ -180,7 +180,7 @@ export default function Explore() {
                       />
                     </div>
                     <p
-                      className={`${inter.className} transition-all ease-in-out duration-200 text-[#4E4E4E] text-md font-medium pt-2 px-6`}
+                      className={`${inter.className} transition-all ease-in-out duration-200 text-[#000000]/80 text-md font-bold pt-2 px-6`}
                     >
                       {elem.subtitle}
                     </p>

@@ -37,7 +37,7 @@ export default function Faq() {
           zIndex: 0,
         }}
       />
-      <div className="max-w-screen-xl mx-auto px-6 gap-12 flex flex-col md:flex-row md:px-8">
+      <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row md:px-8">
         <div className="flex-1 z-40">
           <div className="max-w-lg">
             <h3 className={`${josefin.className} font-bold text-tkdblue`}>
@@ -50,7 +50,7 @@ export default function Faq() {
             </p>
           </div>
         </div>
-        <div className="flex-1 mt-12 md:mt-0 z-40">
+        <div className="flex-1 md:mt-0 z-40">
           <motion.div
             variants={parent}
             initial="hidden"

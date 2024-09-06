@@ -33,9 +33,11 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="relative pt-20 pb-10">
-        <h2 className={`font-bold ${josefin.className} text-3xl ml-5`}>
-          What our awesome students are saying
+      <div className="relative pt-10 pb-10 bg-tkdblue rounded-xl">
+        <h2
+          className={`font-bold ${josefin.className} text-3xl ml-5 text-white`}
+        >
+          What our amazing students are saying
         </h2>
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide">
@@ -48,25 +50,25 @@ export default function Reviews() {
             <ReviewSlide previews={review3} />
           </div>
         </div>
+        {loaded && instanceRef.current && (
+          <div className="flex justify-center py-4">
+            {instanceRef.current.track.details.slides.map((slide) => {
+              return (
+                <button
+                  key={slide.abs}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(slide.abs);
+                  }}
+                  className={
+                    "border-none focus:outline-none w-[5px] h-[5px] bg-white rounded-full mx-1 p-[0.3rem] cursor-pointer" +
+                    (currentSlide === slide.abs ? " !bg-sky-400" : "")
+                  }
+                ></button>
+              );
+            })}
+          </div>
+        )}
       </div>
-      {loaded && instanceRef.current && (
-        <div className="flex justify-center py-4">
-          {instanceRef.current.track.details.slides.map((slide) => {
-            return (
-              <button
-                key={slide.abs}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(slide.abs);
-                }}
-                className={
-                  "border-none focus:outline-none w-[5px] h-[5px] bg-[#c5c5c5] rounded-full mx-1 p-[0.3rem] cursor-pointer" +
-                  (currentSlide === slide.abs ? " !bg-tkdblue" : "")
-                }
-              ></button>
-            );
-          })}
-        </div>
-      )}
     </>
   );
 }

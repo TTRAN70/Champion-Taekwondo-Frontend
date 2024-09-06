@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { josefin, inter } from "@/app/fonts";
 import Link from "next/link";
-import { kidsctkddata } from "@/app/lib/classdata";
+import { changes, benefits } from "@/app/lib/kidsctkddata";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 
 export default function KidsCTKD() {
   return (
@@ -30,13 +35,10 @@ export default function KidsCTKD() {
           Kids love Champion Taekwondo!
         </h3>
         <p
-          className={`${inter.className} text-sm text-[#575757] sm:text-md lg:text-lg text-center`}
+          className={`${inter.className} font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg text-center`}
         >
-          Our martial arts programs are high-energy, fun and interactive with
-          the goal of being able to build our student&apos;s self esteem, which
-          we do by acknowledging, recognizing and rewarding not just our
-          student&apos;s accomplishments and successes, but through their
-          efforts as well!
+          High-energy, fun and interactive classes for kids, designed to help
+          them grow for the future.
         </p>
       </div>
       <div className="flex justify-center">
@@ -57,27 +59,14 @@ export default function KidsCTKD() {
             Kids Have Had
           </p>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
-            {kidsctkddata.map((elem) => {
+            {changes.map((elem) => {
               return (
-                <div
-                  className="relative overflow-hidden rounded-lg bg-background p-2"
+                <ChangesComponent
                   key={elem.title}
-                >
-                  <div className="flex h-40 flex-col rounded-md p-5">
-                    <Image
-                      src={elem.src}
-                      alt={elem.alt}
-                      width={50}
-                      height={50}
-                      className="self-center"
-                    />
-                    <h3
-                      className={`font-medium self-center text-xl mt-10 ${josefin.className}`}
-                    >
-                      {elem.title}
-                    </h3>
-                  </div>
-                </div>
+                  title={elem.title}
+                  src={elem.src}
+                  alt={elem.alt}
+                />
               );
             })}
           </div>
@@ -94,8 +83,113 @@ export default function KidsCTKD() {
           <div className="font-bold flex justify-center mt-5">
             *Earliest enrollment age is 5
           </div>
+          <div
+            className={`${inter.className} flex justify-center items-center flex-col pt-20 px-10 pb-10`}
+          >
+            <h3 className="text-5xl font-bold pb-10">Benefits of Taekwondo</h3>
+            <p className="text-md font-normal pb-10">
+              The more classes a kid takes - the better it will be for their
+              future.
+            </p>
+            <div className="mx-auto w-full max-w-lg divide-y divide-black/5 rounded-xl bg-black/5">
+              {benefits.map((elem) => {
+                return (
+                  <BenefitsComponent
+                    key={elem.title}
+                    title={elem.title}
+                    desc={elem.desc}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="container lg:w-[60%] mx-auto py-14 px-6 sm:p-16">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
+                <h2 className="text-5xl font-bold mb-4">What to Expect</h2>
+                <p className="py-5 font-medium">
+                  Classes that we guarantee - without worry.
+                </p>
+                <ul className="space-y-6 list-none pl-5 pt-8 font-medium">
+                  <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
+                    Structured Classes
+                  </li>
+                  <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
+                    Expert Instructors
+                  </li>
+                  <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
+                    Safe and Supportive Environment
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-secondary text-secondary-foreground p-6 rounded-lg relative grow h-[30rem] md:h-auto">
+                <Image
+                  src="/whitebeltkids.jpg"
+                  alt="Kids practicing form of taekwondo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+  );
+}
+
+function BenefitsComponent({ title, desc }: { title: string; desc: string }) {
+  return (
+    <Disclosure
+      as="div"
+      className="p-6"
+      defaultOpen={title === "Building Confidence" ? true : false}
+    >
+      <DisclosureButton className="group flex w-full items-center">
+        <span className="w-5 h-5 relative mr-2">
+          <Image
+            src="/checkmark.svg"
+            alt="blue checkmark"
+            fill
+            objectFit="contain"
+          />
+        </span>
+        <span className="text-sm/6 font-bold text-black self-start group-data-[hover]:text-black/80">
+          {title}
+        </span>
+      </DisclosureButton>
+      <DisclosurePanel className="mt-2 text-sm/5 font-medium text-black/70">
+        {desc}
+      </DisclosurePanel>
+    </Disclosure>
+  );
+}
+
+function ChangesComponent({
+  title,
+  src,
+  alt,
+}: {
+  title: string;
+  src: string;
+  alt: string;
+}) {
+  return (
+    <div className="relative overflow-hidden rounded-lg bg-background p-2">
+      <div className="flex h-40 flex-col rounded-md p-5">
+        <Image
+          src={src}
+          alt={alt}
+          width={50}
+          height={50}
+          className="self-center"
+        />
+        <h3
+          className={`font-medium self-center text-xl mt-10 ${josefin.className}`}
+        >
+          {title}
+        </h3>
+      </div>
+    </div>
   );
 }

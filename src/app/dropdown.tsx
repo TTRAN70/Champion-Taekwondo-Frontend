@@ -46,7 +46,7 @@ export default function Dropdown({
       </MenuButton>
       <MenuItems
         anchor="bottom start"
-        className={`${inter.className} transition duration-100 ease-out bg-white w-48 font-extrabold rounded-lg p-3 border border-gray-300`}
+        className={`${inter.className} transition duration-100 ease-out bg-white w-48 font-extrabold rounded-lg p-3 shadow-md`}
       >
         {data?.map((elem) => {
           return (

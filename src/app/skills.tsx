@@ -7,28 +7,28 @@ import { useRef } from "react";
 
 const skills = [
   {
-    pic: "/dumbell.png",
+    pic: "/bicep.svg",
     title: "Healthier Life",
     subtitle:
       "Reduce the hospital visits, build strength, flexibility, and cardiovascular endurance like never before",
-    alt: "dumbbell icon",
+    alt: "bicep flex icon",
   },
   {
-    pic: "/tenacity.png",
-    title: "Mental Beast",
+    pic: "/mental.svg",
+    title: "Mental Health",
     subtitle:
       "Conquer everything, develop focus, discipline, and determination that bleeds into your life",
     alt: "bull in mind icon",
   },
   {
-    pic: "/community.png",
+    pic: "/connection.svg",
     title: "Connections",
     subtitle:
       "Make new friends, join a supportive community of like-minded individuals, creating friendships and belonging",
     alt: "group of people",
   },
   {
-    pic: "/fight.png",
+    pic: "/selfdefense.svg",
     title: "Self-Defense",
     subtitle:
       "Feel confident, learn practical techniques to protect yourself and others so you feel safe no matter what",
@@ -37,9 +37,7 @@ const skills = [
 ];
 
 const imageStyles = {
-  borderRadius: "100%",
   padding: "10px",
-  backgroundColor: "#4583E1",
 };
 
 export default function Skills() {
@@ -98,7 +96,7 @@ export default function Skills() {
               IMPROVE YOUR LIFE
             </div>
             <p
-              className={`${inter.className} text-[#7B7878] text-center xl:text-left text-md sm:text-lg font-medium w-[90%] sm:w-[100%] self-center sm:self-auto`}
+              className={`${josefin.className} text-[#000000]/80 text-center xl:text-left text-md sm:text-lg font-bold w-[90%] sm:w-[100%] self-center sm:self-auto`}
             >
               Taekwondo is more than just a martial art; it&apos;s a way of
               life. Here are some of the key benefits you&apos;ll experience:
@@ -115,7 +113,7 @@ export default function Skills() {
                 return (
                   <motion.div key={skill.title} variants={item}>
                     <div
-                      className="relative rounded-[40px] p-3 overflow-hidden border border-gray-300 hover:bg-altgrey hover:border-altgrey w-[20rem] h-[20rem]"
+                      className="relative rounded-[40px] p-3 overflow-hidden w-[20rem] h-[20rem]"
                       key={skill.title}
                     >
                       <div className="flex flex-col p-5 gap-y-2">
@@ -127,12 +125,12 @@ export default function Skills() {
                           style={imageStyles}
                         ></Image>
                         <div
-                          className={`${josefin.className} text-2xl font-bold mt-2`}
+                          className={`${inter.className} text-2xl font-bold mt-2`}
                         >
                           {skill.title}
                         </div>
                         <p
-                          className={`${inter} text-[#7B7878] text-md font-medium`}
+                          className={`${inter.className} text-[#000000]/80 text-md font-medium`}
                         >
                           {skill.subtitle}
                         </p>

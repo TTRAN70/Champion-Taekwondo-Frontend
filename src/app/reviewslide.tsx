@@ -10,7 +10,7 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
           return (
             <div
               key={elem.person}
-              className="basis-[30vw] p-8 bg-white rounded-lg flex flex-col justify-start relative border border-gray-300 hover:bg-altgrey hover:border-altgrey"
+              className="basis-[30vw] p-8 bg-white rounded-lg flex flex-col justify-start relative hover:bg-altgrey hover:border-altgrey"
             >
               <p className={`${inter.className} self-start font-semibold`}>
                 <q>{elem.review}</q>

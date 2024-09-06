@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function Cta() {
   return (
-    <div className="mt-20 px-10 md:px-40 pb-20">
+    <div className="mt-20 px-10 md:px-40">
       <div className="flex flex-col 2xl:flex-row gap-x-10 gap-y-10">
         <div className="md:basis-1/3">
           <h2
-            className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10`}
+            className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10 underline decoration-5 decoration-tkdblue`}
           >
             Ready to Start?
           </h2>
