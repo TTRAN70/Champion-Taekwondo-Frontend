@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import ReviewSlide from "@/app/reviewslide";
+import ReviewSlide from "@/components/landing/reviewslide";
 import { review1, review2, review3 } from "@/app/lib/reviewdata";
-import { josefin } from "./fonts";
+import { josefin } from "@/app/fonts";
 
 export default function Reviews() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);

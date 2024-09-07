@@ -33,7 +33,7 @@ export default function Hero() {
             <div
               className={`${josefin.className} flex items-center justify-center px-3 py-3 sm:px-5 sm:py-4`}
             >
-              <div className="pt-1">GET STARTED </div>
+              <div className="pt-1">Learn more </div>
               <svg
                 className="h-6 w-6 ml-2 text-white"
                 width="10"

@@ -11,7 +11,7 @@ export default function Cta() {
           <h2
             className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10 underline decoration-5 decoration-tkdblue`}
           >
-            Ready to Start?
+            Our Core Values
           </h2>
           {ctaList.map((cta) => {
             return (
@@ -36,7 +36,7 @@ export default function Cta() {
               >
                 <Link href="/join">
                   <div className="flex items-center justify-center text-white px-2 py-2 sm:px-5 sm:py-4">
-                    Get Started{" "}
+                    Contact us{" "}
                     <svg
                       className="h-6 w-6 ml-2 text-white"
                       width="10"

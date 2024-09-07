@@ -1,30 +1,30 @@
 import Image from "next/image";
 import { josefin, inter } from "@/app/fonts";
 import Link from "next/link";
-import { changes, benefits } from "@/app/lib/kidsctkddata";
+import { changes, benefits } from "@/app/lib/teensadultsctkddata";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
 
-export default function KidsCTKD() {
+export default function TeensAdultsCTKD() {
   return (
     <main className="min-h-screen bg-altgrey">
       <div className="w-full h-96 relative">
         <Image
-          src="/kidsctkd.jpg"
+          src="/teensadultsctkd.jpg"
           fill
           style={{
             objectFit: "cover",
           }}
-          alt="Master Lee handing out medals and awards"
+          alt="Performance by a black belt"
         />
         <div className="text-white w-full h-96 absolute bg-[#4583E1]/75 flex items-center justify-center">
           <div
-            className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-3xl sm:text-5xl lg:text-7xl`}
+            className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-xl sm:text-5xl lg:text-6xl`}
           >
-            KIDS TAEKWONDO
+            TEEN & ADULT TAEKWONDO
           </div>
         </div>
       </div>
@@ -32,13 +32,13 @@ export default function KidsCTKD() {
         <h3
           className={`${inter.className} text-2xl sm:text-4xl lg:text-5xl text-center font-extrabold`}
         >
-          Kids love Champion Taekwondo!
+          Strengthen Your Body, Sharpen Your Mind
         </h3>
         <p
-          className={`${inter.className} font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg text-center`}
+          className={`${inter.className} w-[70%] font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg text-center`}
         >
-          High-energy, fun and interactive classes for kids, designed to help
-          them grow for the future.
+          Find improved physical fitness, mental discipline, and personal
+          empowerment regardless of background.
         </p>
       </div>
       <div className="flex justify-center">
@@ -54,9 +54,9 @@ export default function KidsCTKD() {
                 height={15}
                 className="inline-block relative -top-1 -left-1"
               />
-              Positive Changes{" "}
+              Better Changes{" "}
             </span>{" "}
-            That Kids Have
+            Our Students Have Got
           </p>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
             {changes.map((elem) => {
@@ -74,24 +74,21 @@ export default function KidsCTKD() {
             width="560"
             height="315"
             className="mx-auto border border-gray-200 rounded-lg mt-20 w-[320px] h-[180px] lg:w-[560px] lg:h-[315px] sm:w-[400px] sm:h-[225px]"
-            src="https://www.youtube.com/embed/WqRWkTQbbzc?si=ieaiGhZPwl7UMee_"
+            src="https://www.youtube.com/embed/V8CT2HBUGCM?si=TJqQWAylvWyX7fDJ"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <div className="font-bold flex justify-center mt-5">
-            *Earliest enrollment age is 5
-          </div>
           <div
             className={`${inter.className} flex justify-center items-center flex-col pt-20 px-10 pb-10`}
           >
             <h3 className="text-5xl font-bold pb-10">
-              Benefits of Taekwondo for Kids
+              Find the Champion Within You
             </h3>
             <p className="text-md font-normal pb-10">
-              The more classes a kid takes - the better it will be for their
-              future.
+              Supportive and inclusive environment - designed to help you
+              achieve your goals.
             </p>
             <div className="mx-auto w-full max-w-lg divide-y divide-black/5 rounded-xl bg-black/5">
               {benefits.map((elem) => {
@@ -114,19 +111,19 @@ export default function KidsCTKD() {
                 </p>
                 <ul className="space-y-6 list-none pl-5 pt-8 font-medium">
                   <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
-                    Structured Classes
+                    Structured Training
                   </li>
                   <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
-                    Expert Instructors
+                    Certified Instructors
                   </li>
                   <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
-                    Safe and Supportive Environment
+                    Community and Support
                   </li>
                 </ul>
               </div>
               <div className="bg-secondary text-secondary-foreground p-6 rounded-lg relative grow h-[30rem] md:h-auto">
                 <Image
-                  src="/whitebeltkids.jpg"
+                  src="/tornadokick.jpg"
                   alt="Kids practicing form of taekwondo"
                   fill
                   className="object-contain"
@@ -179,7 +176,7 @@ function BenefitsComponent({ title, desc }: { title: string; desc: string }) {
     <Disclosure
       as="div"
       className="p-6"
-      defaultOpen={title === "Building Confidence" ? true : false}
+      defaultOpen={title === "Full-Body Workout" ? true : false}
     >
       <DisclosureButton className="group flex w-full items-center">
         <span className="w-5 h-5 relative mr-2">

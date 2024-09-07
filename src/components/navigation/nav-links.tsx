@@ -6,8 +6,8 @@ import { inter } from "@/app/fonts";
 import { staat } from "@/app/fonts";
 import Image from "next/image";
 import { useState } from "react";
-import Dropdown from "@/app/dropdown";
-import MobileDropdown from "@/app/mobiledropdown";
+import Dropdown from "@/components/navigation/dropdown";
+import MobileDropdown from "@/components/navigation/mobiledropdown";
 
 const links = [
   { name: "HOME", href: "/", dropdown: false },

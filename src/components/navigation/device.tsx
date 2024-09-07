@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { staat } from "@/app/fonts";
-import { NavLinks, MobileSideBar } from "@/app/nav-links";
+import { NavLinks, MobileSideBar } from "@/components/navigation/nav-links";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";

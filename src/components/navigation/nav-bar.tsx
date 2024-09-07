@@ -1,6 +1,6 @@
 "use client";
 
-import Device from "@/app/device";
+import Device from "@/components/navigation/device";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 
