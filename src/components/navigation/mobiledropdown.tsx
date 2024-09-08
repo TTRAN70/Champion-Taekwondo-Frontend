@@ -26,10 +26,10 @@ export default function MobileDropdown({
   return (
     <Disclosure
       as="div"
-      className="p-3 text-black hover:bg-altgrey rounded-lg py-1 my-1 px-5 cursor-pointer"
+      className="p-3 text-black rounded-lg py-1 my-1 px-5 cursor-pointer"
     >
       <DisclosureButton
-        className={`${inter.className} group sm:text-md md:text-lg font-extrabold`}
+        className={`${inter.className} group sm:text-md md:text-lg font-extrabold hover:text-tkdblue`}
       >
         {name}
         <svg
@@ -49,17 +49,19 @@ export default function MobileDropdown({
           <path d="m6 9 6 6 6-6"></path>
         </svg>
       </DisclosureButton>
-      <DisclosurePanel className={`${inter.className} font-extrabold`}>
+      <DisclosurePanel
+        className={`${inter.className} font-extrabold rounded-lg shadow-lg`}
+      >
         {data?.map((elem) => {
           return (
             <Link
               key={elem.name}
               href={elem.href}
-              className={clsx("text-black hover:bg-altgrey rounded-lg")}
+              className={clsx("text-black hover:text-tkdblue rounded-lg")}
             >
               <p
                 className={clsx(
-                  `${inter.className} sm:text-md md:text-lg font-bold w-full pt-2 pr-2 pb-2 pl-4 rounded-lg my-1 hover:bg-white active:bg-white focus:bg-white`
+                  `${inter.className} sm:text-md md:text-lg font-bold w-full pt-2 pr-2 pl-4 pb-2 rounded-lg my-1`
                 )}
                 onClick={() => setOpen(false)}
               >

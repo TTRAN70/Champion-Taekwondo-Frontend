@@ -30,21 +30,21 @@ export default function TeensAdultsCTKD() {
       </div>
       <div className="w-full h-64 flex flex-col justify-center items-center px-10 sm:px-20 xl:px-64 gap-y-10 pt-20 mb-20">
         <h3
-          className={`${inter.className} text-2xl sm:text-4xl lg:text-5xl text-center font-extrabold`}
+          className={`${inter.className} text-2xl sm:text-4xl lg:text-5xl font-extrabold`}
         >
           Strengthen Your Body, Sharpen Your Mind
         </h3>
         <p
-          className={`${inter.className} w-[70%] font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg text-center`}
+          className={`${inter.className} font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg`}
         >
           Find improved physical fitness, mental discipline, and personal
           empowerment regardless of background.
         </p>
       </div>
       <div className="flex justify-center">
-        <div className="w-full h-full bg-white rounded-t-[5rem] py-14">
+        <div className="w-full h-full bg-white rounded-t-[3rem] py-14">
           <p
-            className={`${josefin.className} px-2 mx-auto text-center text-lg sm:text-2xl mb-5 font-bold`}
+            className={`${inter.className} px-2 mx-auto text-center text-xl sm:text-2xl mb-5 font-bold`}
           >
             <span className="">
               <Image
@@ -54,9 +54,9 @@ export default function TeensAdultsCTKD() {
                 height={15}
                 className="inline-block relative -top-1 -left-1"
               />
-              Better Changes{" "}
+              Better changes{" "}
             </span>{" "}
-            Our Students Have Got
+            our students have received
           </p>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
             {changes.map((elem) => {
@@ -124,7 +124,7 @@ export default function TeensAdultsCTKD() {
               <div className="bg-secondary text-secondary-foreground p-6 rounded-lg relative grow h-[30rem] md:h-auto">
                 <Image
                   src="/tornadokick.jpg"
-                  alt="Kids practicing form of taekwondo"
+                  alt="Master doing a tornado kick"
                   fill
                   className="object-contain"
                 />
@@ -133,7 +133,7 @@ export default function TeensAdultsCTKD() {
           </div>
         </div>
       </div>
-      <div className="bg-tkdblue p-20 text-center text-white">
+      <div className="bg-tkdblue p-10 sm:p-20 text-center text-white">
         <h3 className="text-5xl font-bold pb-10">Let's get in touch</h3>
         <p className="text-md font-normal pb-10">
           Don't worry, you won't bother us
@@ -218,7 +218,7 @@ function ChangesComponent({
           className="self-center"
         />
         <h3
-          className={`font-medium self-center text-xl mt-10 ${josefin.className}`}
+          className={`self-center text-xl mt-10 font-bold ${inter.className}`}
         >
           {title}
         </h3>

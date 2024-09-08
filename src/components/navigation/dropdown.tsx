@@ -53,7 +53,7 @@ export default function Dropdown({
             <MenuItem key={elem.name}>
               <Link
                 href={elem.href}
-                className="rounded-lg py-1 px-3 block data-[focus]:bg-altgrey"
+                className="rounded-lg py-1 px-3 block data-[focus]:text-tkdblue"
               >
                 {elem.name}
               </Link>

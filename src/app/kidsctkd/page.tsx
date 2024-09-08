@@ -30,21 +30,21 @@ export default function KidsCTKD() {
       </div>
       <div className="w-full h-64 flex flex-col justify-center items-center px-10 sm:px-20 xl:px-64 gap-y-10 pt-20 mb-20">
         <h3
-          className={`${inter.className} text-2xl sm:text-4xl lg:text-5xl text-center font-extrabold`}
+          className={`${inter.className} text-3xl sm:text-4xl lg:text-5xl font-extrabold`}
         >
           Kids love Champion Taekwondo!
         </h3>
         <p
-          className={`${inter.className} font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg text-center`}
+          className={`${inter.className} font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg`}
         >
           High-energy, fun and interactive classes for kids, designed to help
           them grow for the future.
         </p>
       </div>
       <div className="flex justify-center">
-        <div className="w-full h-full bg-white rounded-t-[5rem] py-14">
+        <div className="w-full h-full bg-white rounded-t-[3rem] py-14">
           <p
-            className={`${josefin.className} px-2 mx-auto text-center text-lg sm:text-2xl mb-5 font-bold`}
+            className={`${inter.className} px-2 mx-auto text-xl text-center sm:text-2xl mb-5 font-bold`}
           >
             <span className="">
               <Image
@@ -54,9 +54,9 @@ export default function KidsCTKD() {
                 height={15}
                 className="inline-block relative -top-1 -left-1"
               />
-              Positive Changes{" "}
+              Positive changes{" "}
             </span>{" "}
-            That Kids Have
+            kids have received
           </p>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
             {changes.map((elem) => {
@@ -136,7 +136,7 @@ export default function KidsCTKD() {
           </div>
         </div>
       </div>
-      <div className="bg-tkdblue p-20 text-center text-white">
+      <div className="bg-tkdblue p-10 sm:p-20 text-center text-white">
         <h3 className="text-5xl font-bold pb-10">Let's get in touch</h3>
         <p className="text-md font-normal pb-10">
           Don't worry, you won't bother us
@@ -221,7 +221,7 @@ function ChangesComponent({
           className="self-center"
         />
         <h3
-          className={`font-medium self-center text-xl mt-10 ${josefin.className}`}
+          className={`self-center text-xl font-bold mt-10 ${inter.className}`}
         >
           {title}
         </h3>

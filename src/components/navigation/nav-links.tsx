@@ -45,7 +45,7 @@ export function NavLinks() {
   return (
     <div
       className={clsx(
-        "hidden xl:flex justify-center items-center self-center xl:mx-auto 2xl:ml-32 py-2 px-8 rounded-full",
+        "hidden xl:flex justify-center items-center self-center xl:mx-auto py-2 px-8 rounded-full",
         {}
       )}
     >
@@ -153,7 +153,7 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
                 key={link.name}
                 href={link.href}
                 className={clsx(
-                  "p-3 text-black hover:bg-altgrey rounded-lg py-1 my-1 px-5",
+                  "p-3 text-black hover:text-tkdblue rounded-lg py-1 my-1 px-5",
                   {
                     "bg-[#0065FF] hover:bg-[#0065FF]": path == link.href,
                   }
