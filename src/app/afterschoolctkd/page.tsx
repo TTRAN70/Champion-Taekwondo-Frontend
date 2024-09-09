@@ -56,7 +56,7 @@ export default function AfterSchoolCTKD() {
         </div>
       </div>
       <div className="container lg:w-[80%] mx-auto py-14 px-6 sm:p-16 text-center mt-10">
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col-reverse md:flex-row gap-4">
           <div className="bg-secondary text-secondary-foreground p-6 rounded-lg relative grow h-[20rem] sm:h-[30rem] md:h-auto">
             <Image
               src="/tired.png"

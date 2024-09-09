@@ -46,14 +46,26 @@ export default function Dropdown({
       </MenuButton>
       <MenuItems
         anchor="bottom start"
-        className={`${inter.className} transition duration-100 ease-out bg-white w-48 font-extrabold rounded-lg p-3 shadow-md`}
+        className={clsx(
+          `${inter.className} transition duration-100 ease-out w-48 font-extrabold rounded-lg p-3 shadow-md`,
+          {
+            "bg-[#282828]": path != "/",
+            "bg-white": path == "/",
+          }
+        )}
       >
         {data?.map((elem) => {
           return (
             <MenuItem key={elem.name}>
               <Link
                 href={elem.href}
-                className="rounded-lg py-1 px-3 block data-[focus]:text-tkdblue"
+                className={clsx(
+                  "rounded-lg py-1 px-3 block data-[focus]:text-tkdblue",
+                  {
+                    "text-white/90": path != "/",
+                    "text-black": path == "/",
+                  }
+                )}
               >
                 {elem.name}
               </Link>
