@@ -46,7 +46,7 @@ export default function Faq() {
             <p
               className={`${josefin.className} mt-3 text-white text-3xl font-bold sm:text-4xl`}
             >
-              Questions? We have them answered
+              Things you're probably wondering about
             </p>
           </div>
         </div>

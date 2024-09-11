@@ -9,7 +9,7 @@ export default function Cta() {
       <div className="flex flex-col 2xl:flex-row gap-x-10 gap-y-10">
         <div className="md:basis-1/3">
           <h2
-            className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10 underline decoration-5 decoration-tkdblue`}
+            className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10`}
           >
             Our Core Values
           </h2>

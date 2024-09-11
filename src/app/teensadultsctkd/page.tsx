@@ -20,7 +20,7 @@ export default function TeensAdultsCTKD() {
           }}
           alt="Performance by a black belt"
         />
-        <div className="text-white w-full h-96 absolute bg-[#4583E1]/75 flex items-center justify-center">
+        <div className="text-white w-full h-96 absolute bg-[#4583E1]/90 flex items-center justify-center">
           <div
             className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-xl sm:text-5xl lg:text-6xl`}
           >
@@ -30,15 +30,15 @@ export default function TeensAdultsCTKD() {
       </div>
       <div className="w-full h-64 flex flex-col justify-center items-center px-10 sm:px-20 xl:px-64 gap-y-10 pt-20 mb-20">
         <h3
-          className={`${inter.className} text-2xl sm:text-4xl lg:text-5xl font-extrabold`}
+          className={`${josefin.className} text-2xl sm:text-4xl lg:text-5xl font-extrabold`}
         >
           Strengthen Your Body, Sharpen Your Mind
         </h3>
         <p
           className={`${inter.className} font-medium text-sm text-[#000000]/80 sm:text-md lg:text-lg`}
         >
-          Find improved physical fitness, mental discipline, and personal
-          empowerment regardless of background.
+          Seek improved fitness, mental discipline, and personal empowerment
+          regardless of background.
         </p>
       </div>
       <div className="flex justify-center">
@@ -83,7 +83,7 @@ export default function TeensAdultsCTKD() {
           <div
             className={`${inter.className} flex justify-center items-center flex-col pt-20 px-10 pb-10`}
           >
-            <h3 className="text-5xl font-bold pb-10">
+            <h3 className={`${josefin.className} text-5xl font-bold pb-10`}>
               Find the Champion Within You
             </h3>
             <p className="text-md font-normal pb-10">
@@ -105,7 +105,9 @@ export default function TeensAdultsCTKD() {
           <div className="container lg:w-[60%] mx-auto py-14 px-6 sm:p-16">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
-                <h2 className="text-5xl font-bold mb-4">What to Expect</h2>
+                <h2 className={`${josefin.className} text-5xl font-bold mb-4`}>
+                  What to Expect
+                </h2>
                 <p className="py-5 font-medium">
                   Classes that we guarantee - without worry.
                 </p>

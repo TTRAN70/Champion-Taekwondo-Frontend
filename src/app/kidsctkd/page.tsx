@@ -20,7 +20,7 @@ export default function KidsCTKD() {
           }}
           alt="Master Lee handing out medals and awards"
         />
-        <div className="text-white w-full h-96 absolute bg-[#4583E1]/75 flex items-center justify-center">
+        <div className="text-white w-full h-96 absolute bg-[#4583E1]/90 flex items-center justify-center">
           <div
             className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-3xl sm:text-5xl lg:text-7xl`}
           >
@@ -30,7 +30,7 @@ export default function KidsCTKD() {
       </div>
       <div className="w-full h-64 flex flex-col justify-center items-center px-10 sm:px-20 xl:px-64 gap-y-10 pt-20 mb-20">
         <h3
-          className={`${inter.className} text-3xl sm:text-4xl lg:text-5xl font-extrabold`}
+          className={`${josefin.className} text-3xl sm:text-4xl lg:text-5xl font-extrabold`}
         >
           Kids love Champion Taekwondo!
         </h3>
@@ -83,32 +83,50 @@ export default function KidsCTKD() {
           <div className="font-bold flex justify-center mt-5">
             *Earliest enrollment age is 5
           </div>
-          <div
-            className={`${inter.className} flex justify-center items-center flex-col pt-20 px-10 pb-10`}
-          >
-            <h3 className="text-5xl font-bold pb-10">
+          <div className="flex flex-col justify-center items-center p-7 mt-5">
+            <h3 className="text-5xl font-bold py-10">
               Benefits of Taekwondo for Kids
             </h3>
-            <p className="text-md font-normal pb-10">
+            <p className="text-md font-normal">
               The more classes a kid takes - the better it will be for their
               future.
             </p>
-            <div className="mx-auto w-full max-w-lg divide-y divide-black/5 rounded-xl bg-black/5">
-              {benefits.map((elem) => {
-                return (
-                  <BenefitsComponent
-                    key={elem.title}
-                    title={elem.title}
-                    desc={elem.desc}
-                  />
-                );
-              })}
+          </div>
+          <div className="container lg:w-[60%] mx-auto py-14 px-6 sm:p-16">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1">
+                <div
+                  className={`${josefin.className} flex justify-center items-center flex-col`}
+                >
+                  <div className="mx-auto w-full max-w-lg divide-y divide-black/5 rounded-xl bg-black/5">
+                    {benefits.map((elem) => {
+                      return (
+                        <BenefitsComponent
+                          key={elem.title}
+                          title={elem.title}
+                          desc={elem.desc}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              <div className="bg-secondary text-secondary-foreground p-6 rounded-lg relative grow h-[30rem] md:h-auto">
+                <Image
+                  src="/kidsbenefits.jpg"
+                  alt="girl holding the flag of the korea"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
             </div>
           </div>
           <div className="container lg:w-[60%] mx-auto py-14 px-6 sm:p-16">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
-                <h2 className="text-5xl font-bold mb-4">What to Expect</h2>
+                <h2 className={`${josefin.className} text-5xl font-bold mb-4`}>
+                  What to Expect
+                </h2>
                 <p className="py-5 font-medium">
                   Classes that we guarantee - without worry.
                 </p>
@@ -176,11 +194,7 @@ export default function KidsCTKD() {
 
 function BenefitsComponent({ title, desc }: { title: string; desc: string }) {
   return (
-    <Disclosure
-      as="div"
-      className="p-6"
-      defaultOpen={title === "Building Confidence" ? true : false}
-    >
+    <Disclosure as="div" className="p-6" defaultOpen={true}>
       <DisclosureButton className="group flex w-full items-center">
         <span className="w-5 h-5 relative mr-2">
           <Image

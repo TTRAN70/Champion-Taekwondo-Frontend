@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { josefin } from "@/app/fonts";
 
 export default function About() {
   const viewRef = useRef(null);
@@ -37,8 +38,10 @@ export default function About() {
       <div className="container xl:w-[80%] mx-auto pt-14 px-6 lg:px-16 sm:pt-16">
         <div className="flex flex-col md:flex-row gap-x-4 xl:gap-x-20 gap-y-10">
           <div className="flex-1 bg-white text-primary-foreground p-6 rounded-lg relative">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 relative pb-8">
-              Where it began
+            <h2
+              className={`${josefin.className} text-3xl sm:text-5xl font-bold mb-4 relative pb-8`}
+            >
+              History
               <div className="absolute w-20 h-1 bg-tkdblue top-[100%]"></div>
             </h2>
             <p className="font-medium leading-relaxed">
@@ -82,7 +85,9 @@ export default function About() {
               />
             </div>
             <div className="flex-1 bg-white text-primary-foreground p-6 rounded-lg relative">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-4 relative pb-5">
+              <h2
+                className={`${josefin.className} text-3xl sm:text-5xl font-bold mb-4 relative pb-2`}
+              >
                 Involvement
               </h2>
               <p className="font-medium leading-relaxed">
@@ -110,9 +115,10 @@ export default function About() {
         >
           <div className="flex flex-col md:flex-row gap-x-4 xl:gap-x-20 gap-y-10">
             <div className="flex-1 bg-white text-primary-foreground p-6 rounded-lg relative">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-4 relative pb-8">
+              <h2
+                className={`${josefin.className} text-3xl sm:text-5xl font-bold mb-4 relative pb-2`}
+              >
                 Demonstrations
-                <div className="absolute w-20 h-1 bg-tkdblue top-[100%]"></div>
               </h2>
               <p className="font-medium leading-relaxed">
                 Master Lee does demonstrations every year at SPIFFs ( St.
@@ -154,7 +160,9 @@ export default function About() {
               />
             </div>
             <div className="flex-1 bg-white text-primary-foreground p-6 rounded-lg relative">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-4 relative pb-5">
+              <h2
+                className={`${josefin.className} text-3xl sm:text-5xl font-bold mb-4 relative pb-2`}
+              >
                 Leadership
               </h2>
               <p className="font-medium leading-relaxed">

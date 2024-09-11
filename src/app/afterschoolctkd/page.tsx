@@ -26,7 +26,7 @@ export default function AfterSchoolCTKD() {
           }}
           alt="Performance by a black belt"
         />
-        <div className="text-white w-full h-96 absolute bg-[#4583E1]/75 flex items-center justify-center">
+        <div className="text-white w-full h-96 absolute bg-[#4583E1]/90 flex items-center justify-center">
           <div
             className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-xl sm:text-5xl lg:text-6xl`}
           >
@@ -80,8 +80,10 @@ export default function AfterSchoolCTKD() {
       <div className="container xl:w-[80%] mx-auto pt-14 px-6 lg:px-16 sm:pt-16">
         <div className="flex flex-col md:flex-row gap-x-4 xl:gap-x-20 gap-y-10">
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
-            <h2 className="text-5xl font-bold mb-4 relative pb-8">
-              A program for you
+            <h2
+              className={`${josefin.className} text-5xl font-bold mb-4 relative pb-8`}
+            >
+              Enroll today
               <div className="absolute w-20 h-1 bg-tkdblue top-[100%]"></div>
             </h2>
             <p className="py-5 font-medium">
@@ -128,12 +130,10 @@ export default function AfterSchoolCTKD() {
             </ul>
           </div>
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
-            <h2 className="text-5xl font-bold mb-4">
+            <h2 className={`${josefin.className} text-5xl font-bold mb-4`}>
               Current elementary schools
             </h2>
-            <p className="py-5 font-medium">
-              These are the schools we pick up from.
-            </p>
+            <p className="py-2 font-medium">Schools we pick up from.</p>
             <ul className="space-y-6 list-none pl-5 pt-8 font-medium">
               <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
                 Bardmoor

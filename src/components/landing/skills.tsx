@@ -93,7 +93,7 @@ export default function Skills() {
             <div
               className={`${josefin.className} text-center xl:text-left text-black text-4xl sm:text-7xl font-bold self-center sm:self-auto`}
             >
-              IMPROVE YOUR LIFE
+              MIND, BODY, SPIRIT
             </div>
             <p
               className={`${josefin.className} text-[#000000]/80 text-center xl:text-left text-md sm:text-lg font-bold w-[90%] sm:w-[100%] self-center sm:self-auto`}

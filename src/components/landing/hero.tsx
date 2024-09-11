@@ -5,15 +5,17 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="h-[35rem] sm:h-[41rem] relative rounded-[2rem] overflow-hidden flex items-center justify-center">
-      <Image
-        src="/Landing1.jpg"
-        fill
-        style={{
-          objectFit: "cover",
-          filter: "brightness(50%)",
-        }}
-        alt="Students putting their hand over their chest"
-      />
+      <video
+        playsInline
+        autoPlay
+        muted
+        preload="none"
+        className="object-cover absolute w-full h-full brightness-50"
+        loop
+      >
+        <source src="/landing.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="px-10 flex flex-col text-white sm:items-start lg:px-44 gap-y-6">
         <div
           className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center self-center text-4xl md:text-6xl font-medium`}
