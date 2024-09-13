@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function Cta() {
   return (
-    <div className="mt-20 px-10 md:px-40">
+    <div className="mt-20 px-10 md:px-20">
       <div className="flex flex-col 2xl:flex-row gap-x-10 gap-y-10">
         <div className="md:basis-1/3">
           <h2
             className={`${josefin.className} text-black rounded-lg text-3xl font-bold mb-10`}
           >
-            Our Core Values
+            Our Values
           </h2>
           {ctaList.map((cta) => {
             return (
@@ -69,18 +69,7 @@ export default function Cta() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap gap-x-2 gap-y-3 xl:gap-y-0 w-full h-[40rem] xl:h-[60rem]">
-          <div className="grow relative h-[35%] w-full">
-            <Image
-              src="/split.jpg"
-              objectFit={"cover"}
-              fill
-              alt="Girl doing splits"
-              style={{
-                borderRadius: "10px",
-              }}
-            />
-          </div>
+        <div className="flex items-center flex-wrap gap-x-2 gap-y-3 xl:gap-y-0 w-full h-[40rem] xl:h-[60rem]">
           <div className="grow relative h-[40%] w-[47%] bottom-[10%]">
             <Image
               src="/GRAMPS.jpg"

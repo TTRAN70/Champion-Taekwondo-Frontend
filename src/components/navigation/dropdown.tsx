@@ -1,6 +1,5 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { inter } from "@/app/fonts";
-import clsx from "clsx";
 import Link from "next/link";
 
 type PropData = {
@@ -20,17 +19,11 @@ export default function Dropdown({
   return (
     <Menu>
       <MenuButton
-        className={clsx(
-          `${inter.className} data-[active]:bg-[#0065FF] data-[active]:text-white data-[open]:bg-[#0065FF] data-[open]:text-white relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
-          {
-            "text-black hover:bg-altgrey": path == "/",
-            "text-white hover:bg-neutral-800": path != "/",
-          }
-        )}
+        className={`${inter.className} text-black data-[active]:bg-[#0065FF] data-[active]:text-white data-[open]:bg-[#0065FF] data-[open]:text-white relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`}
       >
         {name}
         <svg
-          className={clsx(`size-4 inline-block relative left-[8%]`)}
+          className={`size-4 inline-block relative left-[8%]`}
           xmlns="http://www.w3.org/2000/svg"
           width="10"
           height="10"
@@ -46,26 +39,16 @@ export default function Dropdown({
       </MenuButton>
       <MenuItems
         anchor="bottom start"
-        className={clsx(
-          `${inter.className} transition duration-100 ease-out w-48 font-extrabold rounded-lg p-3 shadow-md`,
-          {
-            "bg-[#282828]": path != "/",
-            "bg-white": path == "/",
-          }
-        )}
+        className={`${inter.className} transition duration-100 ease-out w-48 font-extrabold rounded-lg p-3 shadow-md bg-white`}
       >
         {data?.map((elem) => {
           return (
             <MenuItem key={elem.name}>
               <Link
                 href={elem.href}
-                className={clsx(
-                  "rounded-lg py-1 px-3 block data-[focus]:text-tkdblue",
-                  {
-                    "text-white/90": path != "/",
-                    "text-black": path == "/",
-                  }
-                )}
+                className={
+                  "text-black rounded-lg py-1 px-3 block data-[focus]:text-tkdblue"
+                }
               >
                 {elem.name}
               </Link>

@@ -15,6 +15,7 @@ const config: Config = {
       },
       gridTemplateColumns: {
         gallery: "repeat(auto-fit, minmax(250px, 1fr))",
+        skills: "repeat(auto-fit, minmax(auto, 200px))",
       },
       colors: {
         tkdblue: "#4583E1",

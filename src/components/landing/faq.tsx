@@ -26,17 +26,7 @@ export default function Faq() {
   };
 
   return (
-    <section className="py-14 mt-10 relative rounded-[3rem]">
-      <Image
-        src="/rt5.jpg"
-        fill
-        objectFit={"cover"}
-        alt="Blue background with pattern"
-        style={{
-          borderRadius: "50px",
-          zIndex: 0,
-        }}
-      />
+    <section className="py-20 my-20 relative rounded-[3rem] bg-black">
       <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row md:px-8">
         <div className="flex-1 z-40">
           <div className="max-w-lg">
@@ -57,7 +47,7 @@ export default function Faq() {
             animate={viewRef ? "visible" : "hidden"}
             ref={faqRef}
           >
-            <ul className="space-y-4 divide-y divide-gray-700">
+            <ul className="space-y-4 divide-y divide-white-700">
               {faqsList.map((item, idx) => (
                 <li className="py-5" key={idx}>
                   <summary className="flex items-center justify-between font-semibold text-white">

@@ -17,7 +17,7 @@ export const changes = [
   {
     src: "/succeed.svg",
     alt: "Mountain with flag on top of it",
-    title: "Energy for success",
+    title: "Success",
   },
   {
     src: "/teamwork.svg",

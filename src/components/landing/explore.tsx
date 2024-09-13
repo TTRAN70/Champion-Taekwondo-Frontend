@@ -110,7 +110,7 @@ export default function Explore() {
     },
   };
   return (
-    <div className="h-[55rem] sm:h-[58rem] lg:h-[58rem] 2xl:h-[55rem] rounded-[3rem] px-10 xl:px-56 py-14 relative">
+    <div className="h-[50rem] rounded-[3rem] px-10 xl:px-56 py-10 relative">
       <motion.div
         variants={parent}
         initial="hidden"
@@ -126,7 +126,7 @@ export default function Explore() {
           <h2
             className={`${josefin.className} text-black text-2xl sm:text-5xl font-bold z-40`}
           >
-            Fun. Productive. For You.
+            A Great Place to Start
           </h2>
         </div>
         {loaded && instanceRef.current && (
@@ -156,15 +156,15 @@ export default function Explore() {
               <motion.div
                 key={elem.title}
                 whileTap={{}}
-                whileHover={{ translateY: -10, transition: { duration: 0.3 } }}
+                whileHover={{ translateY: 0, transition: { duration: 0.3 } }}
                 transition={{
                   duration: 0.3, // duration time when mouse leaves the element
                 }}
               >
-                <div className="keen-slider__slide h-[32rem] relative rounded-[2rem] group hover:cursor-pointer hover:shadow-lg">
+                <div className="keen-slider__slide h-[32rem] relative rounded-[2rem] group hover:cursor-pointer hover:shadow-lg border border-2">
                   <div className="flex flex-col h-full bg-white">
                     <h2
-                      className={`${inter.className} transition-all ease-in-out duration-200 text-black group-hover:border-0 group-hover:bg-[#4790FF] group-hover:text-white text-xl font-bold mt-6 mx-6 py-1 px-3 rounded-full border-0 border-black w-max`}
+                      className={`${inter.className} transition-all ease-in-out duration-200 text-black group-hover:border-0 group-hover:text-tkdblue text-xl font-bold mt-6 mx-6 py-1 px-3 rounded-full border-0 border-black w-max`}
                     >
                       {elem.title}
                     </h2>

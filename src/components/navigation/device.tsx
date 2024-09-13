@@ -1,11 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import { staat } from "@/app/fonts";
 import { NavLinks, MobileSideBar } from "@/components/navigation/nav-links";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
 
 export default function Device() {
   return (
@@ -17,18 +13,10 @@ export default function Device() {
 }
 
 export function Desktop() {
-  const path = usePathname();
   return (
     <>
       <div className="hidden xl:flex justify-center items-center gap-x-7">
-        <div
-          className={clsx(`${staat.className} text-3xl`, {
-            "text-black": path == "/",
-            "text-white": path != "/",
-          })}
-        >
-          Champion
-        </div>
+        <div className={`${staat.className} text-3xl text-black`}>Champion</div>
         <div className="relative w-20 h-20">
           <Image
             src="/ctkdlogo.png"
@@ -37,12 +25,7 @@ export function Desktop() {
             alt="CTKD Logo"
           />
         </div>
-        <div
-          className={clsx(`${staat.className} text-3xl`, {
-            "text-black": path == "/",
-            "text-white": path != "/",
-          })}
-        >
+        <div className={`${staat.className} text-3xl text-black`}>
           Taekwondo
         </div>
       </div>
@@ -53,28 +36,16 @@ export function Desktop() {
 
 export function Mobile() {
   const [isOpened, setOpen] = useState<boolean>(false);
-  const path = usePathname();
   return (
     <>
       {isOpened && (
         <div className="block xl:hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"></div>
       )}
       <MobileSideBar isOpened={isOpened} setOpen={setOpen} />
-      <div
-        className={clsx(
-          "flex xl:hidden justify-center items-center self-center rounded-full",
-          {
-            "bg-[#5C5C5C]/[.3]": path != "/",
-            "bg-[#f1f5f9]": path == "/",
-          }
-        )}
-      >
+      <div className="flex xl:hidden justify-center items-center self-center rounded-full">
         <button
           onClick={() => setOpen(true)}
-          className={clsx("navbar-burger flex items-center p-3", {
-            "text-white": path != "/",
-            "text-black": path == "/",
-          })}
+          className="navbar-burger flex items-center p-3 text-black"
         >
           <svg
             className="block h-5 w-5 fill-current"

@@ -26,7 +26,7 @@ export default function AfterSchoolCTKD() {
           }}
           alt="Performance by a black belt"
         />
-        <div className="text-white w-full h-96 absolute bg-[#4583E1]/90 flex items-center justify-center">
+        <div className="text-white w-full h-96 absolute bg-[#4583E1]/1 flex items-center justify-center">
           <div
             className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] font-bold text-xl sm:text-5xl lg:text-6xl`}
           >
@@ -154,8 +154,8 @@ export default function AfterSchoolCTKD() {
           </div>
         </div>
       </div>
-      <div className="bg-tkdblue p-10 sm:p-20 text-center text-white">
-        <h3 className="text-5xl font-bold pb-10">Let's get in touch</h3>
+      <div className="bg-tkdblue mt-28 p-10 sm:p-20 text-center text-white">
+        <h3 className="text-4xl font-bold pb-10">Let's get in touch</h3>
         <p className="text-md font-normal pb-10">
           Don't worry, you won't bother us
         </p>

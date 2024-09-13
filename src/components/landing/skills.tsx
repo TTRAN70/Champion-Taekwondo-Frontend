@@ -84,7 +84,7 @@ export default function Skills() {
         ref={ref}
       >
         <div className="flex flex-col xl:flex-row items-center mt-20 xl:mt-32 justify-center xl:ml-12">
-          <div className="flex flex-col sm:w-[27rem] gap-y-7 mb-20 xl:mb-0">
+          <div className="flex flex-col gap-y-7 mb-20 xl:mb-0">
             <div
               className={`${josefin.className} text-center xl:text-left text-tkdblue text-lg font-semibold`}
             >
@@ -108,12 +108,12 @@ export default function Skills() {
             animate={inView ? "show" : "hidden"}
             ref={ref}
           >
-            <div className="grid justify-center gap-4 md:grid-cols-2 xl:ml-7">
+            <div className="grid justify-center gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 xl:ml-7">
               {skills.map((skill) => {
                 return (
                   <motion.div key={skill.title} variants={item}>
                     <div
-                      className="relative rounded-[40px] p-3 overflow-hidden w-[20rem] h-[20rem]"
+                      className="relative rounded-[40px] p-3 overflow-hidden bg-altgrey h-[20rem]"
                       key={skill.title}
                     >
                       <div className="flex flex-col p-5 gap-y-2">
@@ -143,7 +143,7 @@ export default function Skills() {
           </motion.div>
         </div>
       </motion.div>
-      <div className="flex flex-col sm:flex-row gap-y-10 sm:gap-y-0 justify-center items-center gap-x-12 md:gap-x-24 mt-28 mb-28 sm:mr-8">
+      <div className="flex flex-col sm:flex-row gap-y-10 sm:gap-y-0 justify-center items-center gap-x-12 md:gap-x-24 my-10 sm:mr-8">
         <div className="relative w-28 h-28">
           <Image
             src="/wtlogo.png"

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { josefin, inter } from "@/app/fonts";
 import Link from "next/link";
 
@@ -20,7 +19,7 @@ export default function Hero() {
         <div
           className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center self-center text-4xl md:text-6xl font-medium`}
         >
-          BE THE BEST YOU.
+          BECOME A CHAMPION
         </div>
         <div
           className={`${josefin.className} text-center self-center drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-xl md:text-2xl font-normal`}
@@ -33,9 +32,9 @@ export default function Hero() {
         >
           <Link href="/join">
             <div
-              className={`${josefin.className} flex items-center justify-center px-3 py-3 sm:px-5 sm:py-4`}
+              className={`${inter.className} flex items-center justify-center px-3 py-3 sm:px-5 sm:py-4`}
             >
-              <div className="pt-1">Learn more </div>
+              <div>Learn more </div>
               <svg
                 className="h-6 w-6 ml-2 text-white"
                 width="10"

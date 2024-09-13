@@ -33,11 +33,11 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="relative pt-10 pb-10 bg-tkdblue rounded-xl">
+      <div className="relative py-5 rounded-xl">
         <h2
-          className={`font-bold ${josefin.className} text-3xl ml-5 text-white`}
+          className={`font-bold ${josefin.className} text-4xl px-7 py-5 text-black`}
         >
-          What our amazing students are saying
+          What our amazing students had to say
         </h2>
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide">
@@ -60,8 +60,8 @@ export default function Reviews() {
                     instanceRef.current?.moveToIdx(slide.abs);
                   }}
                   className={
-                    "border-none focus:outline-none w-[5px] h-[5px] bg-white rounded-full mx-1 p-[0.3rem] cursor-pointer" +
-                    (currentSlide === slide.abs ? " !bg-sky-400" : "")
+                    "border-none focus:outline-none w-[5px] h-[5px] bg-altgrey rounded-full mx-1 p-[0.3rem] cursor-pointer" +
+                    (currentSlide === slide.abs ? " !bg-tkdblue" : "")
                   }
                 ></button>
               );

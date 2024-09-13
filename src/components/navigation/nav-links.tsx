@@ -5,13 +5,12 @@ import { usePathname } from "next/navigation";
 import { inter } from "@/app/fonts";
 import { staat } from "@/app/fonts";
 import Image from "next/image";
-import { useState } from "react";
 import Dropdown from "@/components/navigation/dropdown";
 import MobileDropdown from "@/components/navigation/mobiledropdown";
 
 const links = [
   { name: "HOME", href: "/", dropdown: false },
-  { name: "CALENDAR", href: "/calendar", dropdown: false },
+  { name: "SCHEDULE", href: "/schedule", dropdown: false },
   { name: "GALLERY", href: "/gallery", dropdown: false },
   {
     name: "CLASSES",
@@ -67,12 +66,9 @@ export function NavLinks() {
               className={clsx(
                 `${inter.className} relative mx-1 transition ease-in-out duration-200 rounded-lg px-3 py-1.5 xl:text-lg lg:text-lg font-extrabold`,
                 {
-                  "text-black hover:bg-altgrey":
-                    path != link.href && path == "/",
                   "text-white hover:bg-neutral-800 bg-[#0065FF]":
                     path == link.href,
-                  "text-white hover:bg-neutral-800":
-                    path != link.href && path != "/",
+                  "text-black hover:bg-altgrey": path != link.href,
                 }
               )}
             >
