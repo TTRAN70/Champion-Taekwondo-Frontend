@@ -15,6 +15,7 @@ const classes = [
     subtitle:
       "Fun and engaging classes specially crafted for our young martial artists.",
     alt: "Kids doing taekwondo form practice",
+    src: "/kidsctkd",
   },
   {
     pic: "/teenctkd.jpg",
@@ -22,6 +23,7 @@ const classes = [
     subtitle:
       "Dynamic sessions designed to challenge and inspire teenagers, fostering discipline and confidence in a supportive environment.",
     alt: "Teens in ready stance",
+    src: "/teensadultsctkd",
   },
   {
     pic: "/adultctkd.jpg",
@@ -29,6 +31,7 @@ const classes = [
     subtitle:
       "Tailored training that challenges and empowers adults of all abilities.",
     alt: "Adults waiting for instruction",
+    src: "/teensadultsctkd",
   },
   {
     pic: "/afterschoolctkd.jpg",
@@ -36,6 +39,7 @@ const classes = [
     subtitle:
       "A safe and productive environment for kids to learn Taekwondo, complete their homework, and develop important life skills.",
     alt: "Kids playing dodgeball",
+    src: "/afterschoolctkd",
   },
 ];
 
@@ -153,48 +157,47 @@ export default function Explore() {
         <div className="pt-12 py-5 keen-slider" ref={ref}>
           {classes.map((elem) => {
             return (
-              <motion.div
-                key={elem.title}
-                whileTap={{}}
-                whileHover={{ translateY: 0, transition: { duration: 0.3 } }}
-                transition={{
-                  duration: 0.3, // duration time when mouse leaves the element
-                }}
-              >
-                <div className="keen-slider__slide h-[32rem] relative rounded-[2rem] group hover:cursor-pointer hover:shadow-lg border border-2">
-                  <div className="flex flex-col h-full bg-white">
-                    <h2
-                      className={`${inter.className} transition-all ease-in-out duration-200 text-black group-hover:border-0 group-hover:text-tkdblue text-xl font-bold mt-6 mx-6 py-1 px-3 rounded-full border-0 border-black w-max`}
-                    >
-                      {elem.title}
-                    </h2>
-                    <div className="h-1/3 w-5/6 relative mx-auto my-3">
-                      <Image
-                        src={elem.pic}
-                        objectFit={"cover"}
-                        fill
-                        alt={elem.alt}
-                        style={{
-                          borderRadius: "10px",
-                        }}
-                      />
-                    </div>
-                    <p
-                      className={`${inter.className} transition-all ease-in-out duration-200 text-[#000000]/80 text-md font-bold pt-2 px-6`}
-                    >
-                      {elem.subtitle}
-                    </p>
-                    <div
-                      className={`${inter.className} font-semibold transition ease-in-out duration-200 group-hover:text-[#4790FF] text-black absolute rounded-tr-lg text-center bottom-0 p-5`}
-                    >
-                      <Link href="/test">
+              <Link key={elem.title} href={elem.src}>
+                <motion.div
+                  whileTap={{}}
+                  whileHover={{ translateY: 0, transition: { duration: 0.3 } }}
+                  transition={{
+                    duration: 0.3, // duration time when mouse leaves the element
+                  }}
+                >
+                  <div className="keen-slider__slide h-[32rem] relative rounded-[2rem] group hover:cursor-pointer hover:shadow-lg border border-2">
+                    <div className="flex flex-col h-full bg-white">
+                      <h2
+                        className={`${inter.className} transition-all ease-in-out duration-200 text-black group-hover:border-0 group-hover:text-tkdblue text-xl font-bold mt-6 mx-6 py-1 px-3 rounded-full border-0 border-black w-max`}
+                      >
+                        {elem.title}
+                      </h2>
+                      <div className="h-1/3 w-5/6 relative mx-auto my-3">
+                        <Image
+                          src={elem.pic}
+                          objectFit={"cover"}
+                          fill
+                          alt={elem.alt}
+                          style={{
+                            borderRadius: "10px",
+                          }}
+                        />
+                      </div>
+                      <p
+                        className={`${inter.className} transition-all ease-in-out duration-200 text-[#000000]/80 text-md font-bold pt-2 px-6`}
+                      >
+                        {elem.subtitle}
+                      </p>
+                      <div
+                        className={`${inter.className} font-semibold transition ease-in-out duration-200 group-hover:text-[#4790FF] text-black absolute rounded-tr-lg text-center bottom-0 p-5`}
+                      >
                         View
                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 group-hover:bg-white bg-[#4790FF]"></span>
-                      </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             );
           })}
         </div>

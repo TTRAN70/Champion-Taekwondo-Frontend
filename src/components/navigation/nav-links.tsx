@@ -23,15 +23,7 @@ const links = [
     ],
   },
   { name: "ABOUT", href: "/about", dropdown: false },
-  {
-    name: "MORE",
-    href: "/more",
-    dropdown: true,
-    expand: [
-      { name: "Contact", href: "/contact" },
-      { name: "How to Join", href: "/howtojoin" },
-    ],
-  },
+  { name: "CONTACT", href: "/contact", dropdown: false },
 ];
 
 type Props = {

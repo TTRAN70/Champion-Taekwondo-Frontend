@@ -30,7 +30,7 @@ export default function Hero() {
         <div
           className={`${inter.className} transition duration-200 ease-in text-lg sm:text-lg font-bold bg-[#4583E1] hover:bg-[#2364C8] w-[210px] self-center rounded-full mt-5 z-40`}
         >
-          <Link href="/join">
+          <Link href="/contact">
             <div
               className={`${inter.className} flex items-center justify-center px-3 py-3 sm:px-5 sm:py-4`}
             >

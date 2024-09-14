@@ -2,6 +2,51 @@ import Image from "next/image";
 import { staat, inter, josefin } from "@/app/fonts";
 import Link from "next/link";
 
+const data = [
+  {
+    title: "Navigate",
+    content: [
+      {
+        title: "Home",
+        src: "/",
+      },
+      {
+        title: "Schedule",
+        src: "/schedule",
+      },
+      {
+        title: "About",
+        src: "/about",
+      },
+      {
+        title: "Gallery",
+        src: "/gallery",
+      },
+    ],
+  },
+  {
+    title: "Programs",
+    content: [
+      {
+        title: "Kids",
+        src: "/kidsctkd",
+      },
+      {
+        title: "Teens",
+        src: "/teensadultsctkd",
+      },
+      {
+        title: "Adults",
+        src: "/teensadultsctkd",
+      },
+      {
+        title: "After School",
+        src: "/afterschoolctkd",
+      },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-black p-10">
@@ -26,26 +71,46 @@ export default function Footer() {
               <li className="leading-relaxed">ctkdflorida@gmail.com</li>
             </ul>
           </div>
+          {data.map((elem) => {
+            return (
+              <div key={elem.title}>
+                <h4
+                  className={`${inter.className} text-sm text-white font-bold`}
+                >
+                  {elem.title}
+                </h4>
+                <ul className="list-none text-white/[.8] text-xs ">
+                  {elem.content.map((content) => {
+                    return (
+                      <Link href={content.src}>
+                        <li
+                          key={content.title}
+                          className="leading-relaxed hover:text-white/[.9]"
+                        >
+                          {content.title}
+                        </li>
+                      </Link>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
           <div>
             <h4 className={`${inter.className} text-sm text-white font-bold`}>
-              Navigate
+              Legal
             </h4>
             <ul className="list-none text-white/[.8] text-xs">
-              <li className="leading-relaxed">Home</li>
-              <li className="leading-relaxed">Calendar</li>
-              <li className="leading-relaxed">About</li>
-              <li className="leading-relaxed">Get Started</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className={`${inter.className} text-sm text-white font-bold`}>
-              Programs
-            </h4>
-            <ul className="list-none text-white/[.8] text-xs">
-              <li className="leading-relaxed">Kids</li>
-              <li className="leading-relaxed">Teens</li>
-              <li className="leading-relaxed">Adults</li>
-              <li className="leading-relaxed">After School</li>
+              <Link href="/terms-of-use">
+                <li className="leading-relaxed hover:text-white/[.9]">
+                  Terms of use
+                </li>
+              </Link>
+              <Link href="/privacy-policy">
+                <li className="leading-relaxed hover:text-white/[.9]">
+                  Privacy policy
+                </li>
+              </Link>
             </ul>
           </div>
         </div>

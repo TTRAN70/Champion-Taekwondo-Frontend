@@ -34,7 +34,7 @@ export default function Cta() {
               <div
                 className={`${inter.className} transition duration-200 ease-in text-xs xl:text-sm font-bold bg-[#4583E1] hover:bg-[#2364C8] w-[130px] sm:w-[150px] self-center rounded-full mt-5`}
               >
-                <Link href="/join">
+                <Link href="/contact">
                   <div className="flex items-center justify-center text-white px-2 py-2 sm:px-5 sm:py-4">
                     Contact us{" "}
                     <svg
@@ -60,11 +60,15 @@ export default function Cta() {
               <div
                 className={`${inter.className} border border-black transition duration-200 ease-in text-xs xl:text-sm font-bold bg-white hover:bg-black sm:w-[150px] self-center rounded-full mt-5`}
               >
-                <Link href="/join">
+                <a
+                  href="https://maps.app.goo.gl/NQ2zGcg48DSHgRYv5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="flex items-center justify-center text-black hover:text-white px-3 py-3 sm:px-5 sm:py-4">
                     Directions{" "}
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

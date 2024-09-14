@@ -152,7 +152,7 @@ export default function TeensAdultsCTKD() {
         <div
           className={`${inter.className} mx-auto transition duration-200 ease-in text-lg sm:text-lg font-bold bg-black hover:bg-black/70 w-[210px] self-center rounded-full z-40`}
         >
-          <Link href="/join">
+          <Link href="/contact">
             <div
               className={`${josefin.className} flex items-center justify-center px-3 py-3 sm:px-5 sm:py-4`}
             >

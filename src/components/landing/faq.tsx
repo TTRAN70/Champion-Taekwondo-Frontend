@@ -26,7 +26,14 @@ export default function Faq() {
   };
 
   return (
-    <section className="py-20 my-20 relative rounded-[3rem] bg-black">
+    <section className="py-20 my-20 relative rounded-[3rem] bg-black relative">
+      <Image
+        src="/pledge.jpg"
+        alt="students pledging"
+        fill
+        objectFit="cover"
+        className="brightness-[0.2] rounded-[3rem]"
+      />
       <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row md:px-8">
         <div className="flex-1 z-40">
           <div className="max-w-lg">
