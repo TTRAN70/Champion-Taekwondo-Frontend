@@ -114,7 +114,7 @@ export default function Explore() {
     },
   };
   return (
-    <div className="h-[50rem] rounded-[3rem] px-10 xl:px-56 py-10 relative">
+    <section className="h-[50rem] rounded-[3rem] px-10 xl:px-56 py-10 relative">
       <motion.div
         variants={parent}
         initial="hidden"
@@ -175,12 +175,15 @@ export default function Explore() {
                       <div className="h-1/3 w-5/6 relative mx-auto my-3">
                         <Image
                           src={elem.pic}
-                          objectFit={"cover"}
                           fill
                           alt={elem.alt}
                           style={{
                             borderRadius: "10px",
+                            objectFit: "cover",
                           }}
+                          sizes="20vw"
+                          placeholder="blur"
+                          blurDataURL={elem.pic}
                         />
                       </div>
                       <p
@@ -202,7 +205,7 @@ export default function Explore() {
           })}
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }
 

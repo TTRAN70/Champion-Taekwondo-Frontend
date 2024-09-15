@@ -58,6 +58,7 @@ export default function Footer() {
               fill
               style={{ objectFit: "contain" }}
               alt="CTKD Logo"
+              sizes="10vw"
             />
           </div>
           <div>
@@ -82,14 +83,12 @@ export default function Footer() {
                 <ul className="list-none text-white/[.8] text-xs ">
                   {elem.content.map((content) => {
                     return (
-                      <Link href={content.src}>
-                        <li
-                          key={content.title}
-                          className="leading-relaxed hover:text-white/[.9]"
-                        >
-                          {content.title}
-                        </li>
-                      </Link>
+                      <li
+                        key={content.title}
+                        className="leading-relaxed hover:text-white/[.9]"
+                      >
+                        <Link href={content.src}>{content.title}</Link>
+                      </li>
                     );
                   })}
                 </ul>
@@ -101,16 +100,13 @@ export default function Footer() {
               Legal
             </h4>
             <ul className="list-none text-white/[.8] text-xs">
-              <Link href="/terms-of-use">
-                <li className="leading-relaxed hover:text-white/[.9]">
-                  Terms of use
-                </li>
-              </Link>
-              <Link href="/privacy-policy">
-                <li className="leading-relaxed hover:text-white/[.9]">
-                  Privacy policy
-                </li>
-              </Link>
+              <li className="leading-relaxed hover:text-white/[.9]">
+                <Link href="/terms-of-use">Terms of use</Link>
+              </li>
+
+              <li className="leading-relaxed hover:text-white/[.9]">
+                <Link href="/privacy-policy">Privacy policy</Link>
+              </li>
             </ul>
           </div>
         </div>

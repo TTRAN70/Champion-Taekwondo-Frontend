@@ -19,13 +19,15 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
               <div className="mt-auto">
                 <Image
                   alt={elem.person}
+                  src={elem.imageurl}
                   width={40}
                   height={40}
-                  src={elem.imageurl}
                   style={{
                     float: "left",
                     marginRight: "10px",
                     borderRadius: "50px",
+                    width: "40px",
+                    height: "40px",
                   }}
                 />
                 <div className="font-bold">{elem.person}</div>
@@ -36,6 +38,7 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
                     fill
                     style={{ objectFit: "contain" }}
                     src="/stars.png"
+                    sizes="10vw"
                   />
                 </div>
               </div>

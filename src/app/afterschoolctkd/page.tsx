@@ -154,7 +154,7 @@ export default function AfterSchoolCTKD() {
           </div>
         </div>
       </div>
-      <div className="bg-tkdblue mt-28 p-10 sm:p-20 text-center text-white">
+      <div className="bg-tkdblue mt-28 p-14 text-center text-white">
         <h3 className="text-4xl font-bold pb-10">Let's get in touch</h3>
         <p className="text-md font-normal pb-10">
           Don't worry, you won't bother us

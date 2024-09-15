@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Cta() {
   return (
-    <div className="mt-20 px-10 md:px-20">
+    <section className="mt-20 px-10 md:px-20">
       <div className="flex flex-col 2xl:flex-row gap-x-10 gap-y-10">
         <div className="md:basis-1/3">
           <h2
@@ -32,7 +32,7 @@ export default function Cta() {
           >
             <div className="flex gap-x-5">
               <div
-                className={`${inter.className} transition duration-200 ease-in text-xs xl:text-sm font-bold bg-[#4583E1] hover:bg-[#2364C8] w-[130px] sm:w-[150px] self-center rounded-full mt-5`}
+                className={`${inter.className} transition duration-200 ease-in text-xs xl:text-sm font-bold bg-tkdblue hover:bg-[#2364C8] w-[130px] sm:w-[150px] self-center rounded-full mt-5`}
               >
                 <Link href="/contact">
                   <div className="flex items-center justify-center text-white px-2 py-2 sm:px-5 sm:py-4">
@@ -77,27 +77,33 @@ export default function Cta() {
           <div className="grow relative h-[40%] w-[47%] bottom-[10%]">
             <Image
               src="/GRAMPS.jpg"
-              objectFit={"cover"}
               fill
               alt="Grandpa and student"
               style={{
                 borderRadius: "10px",
+                objectFit: "cover",
               }}
+              sizes="90vw"
+              placeholder="blur"
+              blurDataURL="GRAMPS.jpg"
             />
           </div>
           <div className="grow relative h-[40%] w-[47%] bottom-[10%]">
             <Image
               src="/apchagi.jpg"
-              objectFit={"cover"}
               fill
               alt="Student doing front kick"
               style={{
                 borderRadius: "10px",
+                objectFit: "cover",
               }}
+              sizes="50vw"
+              placeholder="blur"
+              blurDataURL="apchagi.jpg"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

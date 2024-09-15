@@ -31,8 +31,11 @@ export default function Faq() {
         src="/pledge.jpg"
         alt="students pledging"
         fill
-        objectFit="cover"
+        style={{ objectFit: "cover" }}
         className="brightness-[0.2] rounded-[3rem]"
+        sizes="90vw"
+        placeholder="blur"
+        blurDataURL="/pledge.jpg"
       />
       <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row md:px-8">
         <div className="flex-1 z-40">
@@ -55,8 +58,8 @@ export default function Faq() {
             ref={faqRef}
           >
             <ul className="space-y-4 divide-y divide-white-700">
-              {faqsList.map((item, idx) => (
-                <li className="py-5" key={idx}>
+              {faqsList.map((item) => (
+                <li className="py-5" key={item.q}>
                   <summary className="flex items-center justify-between font-semibold text-white">
                     {item.q}
                   </summary>

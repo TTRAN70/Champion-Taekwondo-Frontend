@@ -1,20 +1,21 @@
 import { josefin, inter } from "@/app/fonts";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="h-[35rem] sm:h-[41rem] relative rounded-[2rem] overflow-hidden flex items-center justify-center">
-      <video
-        playsInline
-        autoPlay
-        muted
-        preload="none"
-        className="object-cover absolute w-full h-full brightness-50"
-        loop
-      >
-        <source src="/landing.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section className="h-[35rem] sm:h-[41rem] relative rounded-[2rem] overflow-hidden flex items-center justify-center">
+      <Image
+        src="/belts.jpg"
+        alt="picture of taekwondo medals"
+        fill
+        style={{ objectFit: "cover" }}
+        priority
+        sizes="100vw"
+        placeholder="blur"
+        blurDataURL="/belts.jpg"
+        className="brightness-[30%]"
+      />
       <div className="px-10 flex flex-col text-white sm:items-start lg:px-44 gap-y-6">
         <div
           className={`${josefin.className} drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)] text-center self-center text-4xl md:text-6xl font-medium`}
@@ -56,6 +57,6 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

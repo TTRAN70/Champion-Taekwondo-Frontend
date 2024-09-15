@@ -15,7 +15,7 @@ export default async function Gallery() {
     <main className="min-h-screen px-5 sm:px-12">
       <section className="px-1 my-3 grid grid-cols-gallery auto-rows-[10px]">
         {images.resources.map((photo) => (
-          <ImgContainer photo={photo} />
+          <ImgContainer key={photo.public_id} photo={photo} />
         ))}
       </section>
     </main>

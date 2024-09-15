@@ -33,7 +33,7 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="relative py-5 rounded-xl">
+      <section className="relative py-5 rounded-xl">
         <h2
           className={`font-bold ${josefin.className} text-4xl px-7 py-5 text-black`}
         >
@@ -55,12 +55,14 @@ export default function Reviews() {
             {instanceRef.current.track.details.slides.map((slide) => {
               return (
                 <button
+                  id="slidenav"
+                  aria-label="slide navigation"
                   key={slide.abs}
                   onClick={() => {
                     instanceRef.current?.moveToIdx(slide.abs);
                   }}
                   className={
-                    "border-none focus:outline-none w-[5px] h-[5px] bg-altgrey rounded-full mx-1 p-[0.3rem] cursor-pointer" +
+                    "border-none focus:outline-none w-[5px] h-[5px] bg-altgrey rounded-full mx-1 p-[0.35rem] cursor-pointer" +
                     (currentSlide === slide.abs ? " !bg-tkdblue" : "")
                   }
                 ></button>
@@ -68,7 +70,7 @@ export default function Reviews() {
             })}
           </div>
         )}
-      </div>
+      </section>
     </>
   );
 }

@@ -93,6 +93,7 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
               fill
               style={{ objectFit: "contain" }}
               alt="CTKD Logo"
+              sizes="50vw"
             />
           </div>
           <div
@@ -102,6 +103,8 @@ export function MobileSideBar({ isOpened, setOpen }: Props) {
           </div>
         </div>
         <button
+          id="close"
+          aria-label="close button"
           type="button"
           className="bg-white rounded-md p-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
           onClick={() => setOpen(false)}

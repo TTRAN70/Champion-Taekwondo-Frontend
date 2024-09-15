@@ -7,19 +7,24 @@ export default function Schedule() {
         src="/blob.svg"
         fill
         alt="curved background image"
-        objectFit="cover"
+        style={{ objectFit: "cover" }}
+        sizes="100vw"
+        priority
+        placeholder="blur"
+        blurDataURL="/blob.svg"
       />
-      <div className="max-w-[100%] max-h-[100vh] mx-auto rounded-lg">
-        <Image
-          src="/calendar.jpg"
-          fill
-          alt="Calendar"
-          style={{
-            borderRadius: "10px",
-            objectFit: "contain",
-          }}
-        />
-      </div>
+      <Image
+        src="/calendar.jpg"
+        fill
+        alt="Calendar"
+        style={{
+          borderRadius: "10px",
+          objectFit: "contain",
+        }}
+        sizes="100vw"
+        placeholder="blur"
+        blurDataURL="/calendar.jpg"
+      />
     </main>
   );
 }

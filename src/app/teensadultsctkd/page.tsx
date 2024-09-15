@@ -49,7 +49,7 @@ export default function TeensAdultsCTKD() {
           <p
             className={`${inter.className} px-2 mx-auto text-black text-center text-md mb-10 font-medium`}
           >
-            Things you may notice as you train
+            Things you may notice as you'll train
           </p>
           <div className="px-3 mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
             {changes.map((elem) => {
@@ -146,7 +146,7 @@ export default function TeensAdultsCTKD() {
           </div>
         </div>
       </div>
-      <div className="bg-tkdblue p-10 sm:p-20 text-center text-white">
+      <div className="bg-tkdblue p-10 p-14 text-center text-white">
         <h3 className="text-4xl font-bold pb-10">Let's get in touch</h3>
         <p className="text-md font-normal pb-10">Start your journey today!</p>
         <div
@@ -194,7 +194,7 @@ function BenefitsComponent({ title, desc }: { title: string; desc: string }) {
             objectFit="contain"
           />
         </span>
-        <span className="text-sm/6 font-bold text-black self-start group-data-[hover]:text-black/80">
+        <span className="text-sm font-bold text-black self-start group-data-[hover]:text-black/80">
           {title}
         </span>
       </DisclosureButton>

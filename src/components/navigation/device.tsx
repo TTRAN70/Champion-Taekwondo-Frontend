@@ -23,6 +23,7 @@ export function Desktop() {
             fill
             style={{ objectFit: "contain" }}
             alt="CTKD Logo"
+            sizes="(max-width: 768px) 5vw, (max-width: 1200px) 10vw"
           />
         </div>
         <div className={`${staat.className} text-3xl text-black`}>
@@ -63,6 +64,7 @@ export function Mobile() {
           fill
           style={{ objectFit: "contain" }}
           alt="CTKD Logo"
+          sizes="50vw"
         />
       </div>{" "}
     </>

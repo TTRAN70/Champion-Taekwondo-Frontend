@@ -77,7 +77,7 @@ export default function Skills() {
 
   return (
     <>
-      <motion.div
+      <motion.section
         variants={parent}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -123,6 +123,7 @@ export default function Skills() {
                           width={70}
                           height={70}
                           style={imageStyles}
+                          sizes="10vw"
                         ></Image>
                         <div
                           className={`${inter.className} text-2xl font-bold mt-2`}
@@ -142,7 +143,7 @@ export default function Skills() {
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </motion.section>
       <div className="flex flex-col sm:flex-row gap-y-10 sm:gap-y-0 justify-center items-center gap-x-12 md:gap-x-24 my-10 sm:mr-8">
         <div className="relative w-28 h-28">
           <Image
@@ -150,6 +151,7 @@ export default function Skills() {
             alt="World Taekwondo Logo"
             fill
             style={{ objectFit: "contain" }}
+            sizes="10vw"
           ></Image>
         </div>
         <div className="relative w-24 h-24">
@@ -158,6 +160,7 @@ export default function Skills() {
             alt="Kukkiwon Logo"
             fill
             style={{ objectFit: "contain" }}
+            sizes="10vw"
           ></Image>
         </div>
         <div className="relative w-16 h-16">
@@ -166,7 +169,7 @@ export default function Skills() {
             alt="World Taekwondo Logo"
             fill
             style={{ objectFit: "contain" }}
-            className="xl:ml-6"
+            sizes="10vw"
           ></Image>
         </div>
       </div>

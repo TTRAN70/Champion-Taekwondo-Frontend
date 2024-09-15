@@ -42,14 +42,9 @@ export default function KidsCTKD() {
       <div className="flex justify-center">
         <div className="w-full h-full bg-white rounded-t-[3rem] py-20">
           <p
-            className={`${inter.className} px-4 mx-auto text-black text-center text-4xl mb-5 font-bold`}
+            className={`${inter.className} px-4 mx-auto text-black text-center text-4xl mb-14 font-bold`}
           >
             Positive Changes Kids Have Obtained
-          </p>
-          <p
-            className={`${inter.className} px-2 mx-auto text-black text-center text-md mb-10 font-medium`}
-          >
-            What your kid will be achieving
           </p>
           <div className="px-3 mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-4">
             {changes.map((elem) => {
@@ -81,8 +76,7 @@ export default function KidsCTKD() {
               Benefits of Taekwondo for Kids
             </h3>
             <p className="text-md font-normal">
-              The more classes a kid takes - the better it will be for their
-              future.
+              What makes taekwondo for kids so great!
             </p>
           </div>
           <div className="container lg:w-[60%] mx-auto py-14 px-6 sm:p-16">
@@ -147,7 +141,7 @@ export default function KidsCTKD() {
           </div>
         </div>
       </div>
-      <div className="bg-tkdblue p-10 sm:p-20 text-center text-white">
+      <div className="bg-tkdblue p-14 text-center text-white">
         <h3 className="text-4xl font-bold pb-10">Let's get in touch</h3>
         <p className="text-md font-normal pb-10">Start your journey today!</p>
         <div
@@ -195,7 +189,7 @@ function BenefitsComponent({ title, desc }: { title: string; desc: string }) {
             objectFit="contain"
           />
         </span>
-        <span className="text-sm/6 font-bold text-black self-start group-data-[hover]:text-black/80">
+        <span className="text-sm font-bold text-black self-start group-data-[hover]:text-black/80">
           {title}
         </span>
       </DisclosureButton>
