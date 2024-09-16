@@ -2,6 +2,7 @@ import Image from "next/image";
 import { staat } from "@/app/fonts";
 import { NavLinks, MobileSideBar } from "@/components/navigation/nav-links";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Device() {
   return (
@@ -15,7 +16,10 @@ export default function Device() {
 export function Desktop() {
   return (
     <>
-      <div className="hidden xl:flex justify-center items-center gap-x-7">
+      <Link
+        href="/"
+        className="hidden xl:flex justify-center items-center gap-x-7"
+      >
         <div className={`${staat.className} text-3xl text-black`}>Champion</div>
         <div className="relative w-20 h-20">
           <Image
@@ -29,7 +33,7 @@ export function Desktop() {
         <div className={`${staat.className} text-3xl text-black`}>
           Taekwondo
         </div>
-      </div>
+      </Link>
       <NavLinks />
     </>
   );
@@ -58,7 +62,10 @@ export function Mobile() {
           </svg>
         </button>
       </div>
-      <div className="flex xl:hidden self-center items-center ml-auto mr-[5%] sm:mr-[10%] relative w-14 h-14">
+      <Link
+        href="/"
+        className="flex xl:hidden self-center items-center ml-auto mr-[5%] sm:mr-[10%] relative w-14 h-14"
+      >
         <Image
           src="/ctkdlogo.png"
           fill
@@ -66,7 +73,7 @@ export function Mobile() {
           alt="CTKD Logo"
           sizes="50vw"
         />
-      </div>{" "}
+      </Link>
     </>
   );
 }

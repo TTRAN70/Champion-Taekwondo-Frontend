@@ -10,9 +10,14 @@ const bullets = [
   "Physical fitness training and activities",
   "Time between classes to do homework",
   "Rewards program",
-  "Belt promotion graduation events, and in-house tournaments",
+  "Belt promotion graduation events",
   "All black belt instructors",
 ];
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "After School Taekwondo",
+};
 
 export default function AfterSchoolCTKD() {
   return (
@@ -25,6 +30,8 @@ export default function AfterSchoolCTKD() {
             objectFit: "cover",
           }}
           alt="Performance by a black belt"
+          sizes="100vw"
+          priority
         />
         <div className="text-white w-full h-96 absolute bg-[#4583E1]/1 flex items-center justify-center">
           <div
@@ -50,7 +57,8 @@ export default function AfterSchoolCTKD() {
               src="/child.png"
               alt="Tired child"
               fill
-              className="object-contain"
+              style={{ objectFit: "contain" }}
+              sizes="50vw"
             />
           </div>
         </div>
@@ -62,7 +70,8 @@ export default function AfterSchoolCTKD() {
               src="/tired.png"
               alt="Tired woman"
               fill
-              className="object-contain"
+              style={{ objectFit: "contain" }}
+              sizes="50vw"
             />
           </div>
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
@@ -103,7 +112,8 @@ export default function AfterSchoolCTKD() {
               src="/kidsrunning.jpg"
               alt="Kids running"
               fill
-              className="object-cover"
+              style={{ objectFit: "cover" }}
+              sizes="80vw"
             />
           </div>
         </div>
@@ -120,10 +130,11 @@ export default function AfterSchoolCTKD() {
                         src="/checkmark.svg"
                         alt="blue checkmark"
                         fill
-                        objectFit="contain"
+                        style={{ objectFit: "contain" }}
+                        sizes="10vw"
                       />
                     </span>{" "}
-                    <span>{elem}</span>
+                    <span className="text-sm sm:text-base">{elem}</span>
                   </li>
                 );
               })}

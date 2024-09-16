@@ -33,7 +33,9 @@ export default function About() {
         src="/blob.svg"
         fill
         alt="curved background image"
-        objectFit="cover"
+        style={{ objectFit: "cover" }}
+        priority
+        sizes="100vw"
       />
       <div className="container xl:w-[80%] mx-auto pt-14 px-6 lg:px-16 sm:pt-16">
         <div className="flex flex-col md:flex-row gap-x-4 xl:gap-x-20 gap-y-10">
@@ -63,7 +65,8 @@ export default function About() {
               src="/yongjunlee.jpg"
               alt="A portrait of Master Lee"
               fill
-              className="object-contain"
+              style={{ objectFit: "contain" }}
+              sizes="50vw"
             />
           </div>
         </div>
@@ -81,7 +84,8 @@ export default function About() {
                 src="/involvement.jpg"
                 alt="picture of students outside"
                 fill
-                className="object-cover"
+                style={{ objectFit: "cover" }}
+                sizes="50vw"
               />
             </div>
             <div className="flex-1 bg-white text-primary-foreground p-6 rounded-lg relative">
@@ -137,7 +141,8 @@ export default function About() {
                 src="/spiffs.jpg"
                 alt="taekwondo students holding up the american and korean flag"
                 fill
-                className="object-cover"
+                style={{ objectFit: "cover" }}
+                sizes="50vw"
               />
             </div>
           </div>
@@ -156,7 +161,8 @@ export default function About() {
                 src="/instructors.jpg"
                 alt="Taekwondo instructors holding their rewards"
                 fill
-                className="object-cover"
+                style={{ objectFit: "cover" }}
+                sizes="50vw"
               />
             </div>
             <div className="flex-1 bg-white text-primary-foreground p-6 rounded-lg relative">

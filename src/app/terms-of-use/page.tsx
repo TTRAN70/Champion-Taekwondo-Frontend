@@ -1,4 +1,9 @@
 import { terms } from "@/app/lib/legaldata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Use",
+};
 
 export default function TermsOfUse() {
   return (

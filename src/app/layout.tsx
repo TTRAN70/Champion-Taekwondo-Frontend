@@ -7,7 +7,10 @@ import Footer from "@/app/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Champion Taekwondo",
+  title: {
+    template: "%s | Champion Taekwondo",
+    default: "Champion Taekwondo",
+  },
   description:
     "With friendly and exciting classes for all age groups, fitness levels, and for fun or serious training… We are the Tae Kwon Do family for you!",
 };

@@ -2,11 +2,18 @@ import Image from "next/image";
 import { josefin, inter } from "@/app/fonts";
 import Link from "next/link";
 import { changes, benefits } from "@/app/lib/teensadultsctkddata";
+import { Suspense } from "react";
+import { YouTubeSkeleton } from "@/app/skeletons";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Teens Taekwondo",
+};
 
 export default function TeensAdultsCTKD() {
   return (
@@ -19,6 +26,10 @@ export default function TeensAdultsCTKD() {
             objectFit: "cover",
           }}
           alt="Performance by a black belt"
+          sizes="100vw"
+          placeholder="blur"
+          blurDataURL="/teensadultsctkd.jpg"
+          priority
         />
         <div className="text-white w-full h-96 absolute bg-[#4583E1]/1 flex items-center justify-center">
           <div
@@ -63,16 +74,18 @@ export default function TeensAdultsCTKD() {
               );
             })}
           </div>
-          <iframe
-            width="560"
-            height="315"
-            className="mx-auto border border-gray-200 rounded-lg mt-16 w-[320px] h-[180px] lg:w-[560px] lg:h-[315px] sm:w-[400px] sm:h-[225px]"
-            src="https://www.youtube.com/embed/V8CT2HBUGCM?si=TJqQWAylvWyX7fDJ"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+          <Suspense fallback={<YouTubeSkeleton />}>
+            <iframe
+              width="560"
+              height="315"
+              className="mx-auto border border-gray-200 rounded-lg mt-16 w-[320px] h-[180px] lg:w-[560px] lg:h-[315px] sm:w-[400px] sm:h-[225px]"
+              src="https://www.youtube.com/embed/V8CT2HBUGCM?si=TJqQWAylvWyX7fDJ"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </Suspense>
           <div
             className={`${inter.className} flex justify-center items-center flex-col pt-20 p-7 pt-20`}
           >
@@ -107,7 +120,9 @@ export default function TeensAdultsCTKD() {
                     src="/teensbenefits.jpg"
                     alt="girl holding the flag of the korea"
                     fill
-                    className="object-cover rounded-lg"
+                    className="rounded-lg"
+                    style={{ objectFit: "cover" }}
+                    sizes="90vw"
                   />
                 </div>
               </div>
@@ -140,6 +155,7 @@ export default function TeensAdultsCTKD() {
                   alt="Master doing a tornado kick"
                   fill
                   className="object-contain"
+                  sizes="50vw"
                 />
               </div>
             </div>
@@ -191,7 +207,7 @@ function BenefitsComponent({ title, desc }: { title: string; desc: string }) {
             src="/checkmark.svg"
             alt="blue checkmark"
             fill
-            objectFit="contain"
+            style={{ objectFit: "contain" }}
           />
         </span>
         <span className="text-sm font-bold text-black self-start group-data-[hover]:text-black/80">
@@ -230,6 +246,8 @@ function ChangesComponent({
           width={50}
           height={50}
           className="self-center"
+          placeholder="blur"
+          blurDataURL={src}
         />
         <h3 className={`self-center text-xl mt-7 font-bold ${inter.className}`}>
           {title}

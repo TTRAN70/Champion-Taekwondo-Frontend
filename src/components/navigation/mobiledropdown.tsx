@@ -50,7 +50,7 @@ export default function MobileDropdown({
         </svg>
       </DisclosureButton>
       <DisclosurePanel
-        className={`${inter.className} font-extrabold rounded-2xl shadow-lg`}
+        className={`${inter.className} font-extrabold rounded-2xl py-4 px-5 shadow-lg`}
       >
         {data?.map((elem) => {
           return (
@@ -61,7 +61,7 @@ export default function MobileDropdown({
             >
               <p
                 className={clsx(
-                  `${inter.className} text-md font-bold w-full p-3 rounded-lg`
+                  `${inter.className} text-md font-bold w-full py-2 rounded-lg`
                 )}
                 onClick={() => setOpen(false)}
               >

@@ -1,5 +1,5 @@
-import { ScheduleSkeleton } from "@/app/skeletons";
+import { TaekwondoLoader } from "@/app/clientloaders";
 
 export default function Loading() {
-  return <ScheduleSkeleton />;
+  return <TaekwondoLoader />;
 }

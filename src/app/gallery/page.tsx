@@ -1,6 +1,11 @@
 import fetchImages from "@/app/lib/fetchImages";
 import type { ImageResults } from "@/app/models/Images";
 import ImgContainer from "@/app/gallery/imgcontainer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+};
 
 export default async function Gallery() {
   const url = "http://res.cloudinary.com/dumnrb366/image/list/ctkd.json";

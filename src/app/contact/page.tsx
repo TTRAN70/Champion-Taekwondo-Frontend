@@ -1,4 +1,11 @@
 import { josefin } from "@/app/fonts";
+import { TaekwondoLoader } from "@/app/clientloaders";
+import { Suspense } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 export default function Contact() {
   return (
@@ -28,7 +35,7 @@ export default function Contact() {
               <div className="flex items-center space-x-3">
                 <svg
                   viewBox="0 0 12 12"
-                  enable-background="new 0 0 12 12"
+                  enableBackground="new 0 0 12 12"
                   version="1.1"
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,11 +44,11 @@ export default function Contact() {
                   width={20}
                   height={20}
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     <path
@@ -62,11 +69,11 @@ export default function Contact() {
                   width={20}
                   height={20}
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}
@@ -90,11 +97,11 @@ export default function Contact() {
                   width={19}
                   height={19}
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}
@@ -127,16 +134,18 @@ export default function Contact() {
 
           <div className="space-y-6">
             <div className="aspect-square">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7055.992846820747!2d-82.76356432397509!3d27.84064621959866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fb6c97492793%3A0xb10c6673f8502ef3!2sChampion%20Tae%20Kwon%20Do!5e0!3m2!1sen!2sus!4v1726038009505!5m2!1sen!2sus"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full rounded-md"
-              ></iframe>
+              <Suspense fallback={<TaekwondoLoader />}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7055.992846820747!2d-82.76356432397509!3d27.84064621959866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fb6c97492793%3A0xb10c6673f8502ef3!2sChampion%20Tae%20Kwon%20Do!5e0!3m2!1sen!2sus!4v1726038009505!5m2!1sen!2sus"
+                  width="600"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full rounded-md"
+                ></iframe>
+              </Suspense>
             </div>
           </div>
         </div>

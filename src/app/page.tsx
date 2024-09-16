@@ -1,6 +1,6 @@
 import Hero from "@/components/landing/hero";
 import React, { lazy, Suspense } from "react";
-import CenteredSpinningLoader from "@/app/centered-spinning-loader";
+import { TaekwondoLoader } from "@/app/clientloaders";
 import { HeroLoad } from "@/app/skeletons";
 const SkillsComponent = lazy(() => import("@/components/landing/skills"));
 const ExploreComponent = lazy(() => import("@/components/landing/explore"));
@@ -14,19 +14,19 @@ export default function Home() {
       <Suspense fallback={<HeroLoad />}>
         <Hero />
       </Suspense>
-      <Suspense fallback={<CenteredSpinningLoader size={80} color="#3498db" />}>
+      <Suspense fallback={<TaekwondoLoader />}>
         <SkillsComponent />
       </Suspense>
-      <Suspense fallback={<CenteredSpinningLoader size={80} color="#3498db" />}>
+      <Suspense fallback={<TaekwondoLoader />}>
         <ExploreComponent />
       </Suspense>
-      <Suspense fallback={<CenteredSpinningLoader size={80} color="#3498db" />}>
+      <Suspense fallback={<TaekwondoLoader />}>
         <ReviewComponent />
       </Suspense>
-      <Suspense fallback={<CenteredSpinningLoader size={80} color="#3498db" />}>
+      <Suspense fallback={<TaekwondoLoader />}>
         <FaqComponent />
       </Suspense>
-      <Suspense fallback={<CenteredSpinningLoader size={80} color="#3498db" />}>
+      <Suspense fallback={<TaekwondoLoader />}>
         <CtaComponent />
       </Suspense>
     </main>
