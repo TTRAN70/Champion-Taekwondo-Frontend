@@ -17,7 +17,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: black;
   background: white;
 }
 
@@ -25,8 +25,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-html {
-  @apply text-black;
 }

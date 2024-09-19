@@ -89,7 +89,7 @@ export default function TeensAdultsCTKD() {
             ></iframe>
           </Suspense>
           <div
-            className={`${inter.className} flex justify-center items-center flex-col pt-20 p-7 pt-20`}
+            className={`${inter.className} flex justify-center items-center flex-col pt-20 p-10`}
           >
             <h3
               className={`${inter.className} text-black text-4xl font-bold mb-10`}

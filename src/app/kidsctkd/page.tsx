@@ -91,7 +91,7 @@ export default function KidsCTKD() {
           <div className="font-bold flex justify-center mt-5">
             *Earliest enrollment age is 5
           </div>
-          <div className="flex flex-col justify-center items-center p-7 pt-20">
+          <div className="flex flex-col sm:justify-center sm:items-center p-10 sm:p-7 pt-20">
             <h3 className="text-4xl font-bold mb-10 text-black">
               Benefits of Taekwondo for Kids
             </h3>
