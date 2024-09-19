@@ -45,7 +45,7 @@ export default function AfterSchoolCTKD() {
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
             <h2
-              className={`${josefin.className} text-xl lg:text-2xl xl:text-4xl font-bold mb-4 !leading-relaxed`}
+              className={`${josefin.className} text-black text-xl lg:text-2xl xl:text-4xl font-bold mb-4 !leading-relaxed`}
             >
               Tired of the <span className="text-tkdblue">usual</span> after
               school programs where children run wild in an{" "}
@@ -76,7 +76,7 @@ export default function AfterSchoolCTKD() {
           </div>
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
             <h2
-              className={`${josefin.className} text-xl lg:text-2xl xl:text-4xl font-bold mb-4 !leading-relaxed`}
+              className={`${josefin.className} text-black text-xl lg:text-2xl xl:text-4xl font-bold mb-4 !leading-relaxed`}
             >
               or running from{" "}
               <span className="text-tkdblue">one activity to another</span>{" "}
@@ -90,16 +90,16 @@ export default function AfterSchoolCTKD() {
         <div className="flex flex-col md:flex-row gap-x-4 xl:gap-x-20 gap-y-10">
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
             <h2
-              className={`${josefin.className} text-5xl font-bold mb-4 relative pb-8`}
+              className={`${josefin.className} text-black text-5xl font-bold mb-4 relative pb-8`}
             >
               Enroll today
               <div className="absolute w-20 h-1 bg-tkdblue top-[100%]"></div>
             </h2>
-            <p className="py-5 font-medium">
+            <p className="py-5 font-medium text-black">
               Create success for your child - in the classroom and in their
               life.
             </p>
-            <p className="font-medium leading-relaxed">
+            <p className="font-medium leading-relaxed text-black">
               Students are escorted and transported from a number of schools
               within the Pinellas County. Safety, convenience, expert training,
               and fun activities help inspire the children while instilling
@@ -134,18 +134,24 @@ export default function AfterSchoolCTKD() {
                         sizes="10vw"
                       />
                     </span>{" "}
-                    <span className="text-sm sm:text-base">{elem}</span>
+                    <span className="text-sm sm:text-base text-black">
+                      {elem}
+                    </span>
                   </li>
                 );
               })}
             </ul>
           </div>
           <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
-            <h2 className={`${josefin.className} text-5xl font-bold mb-4`}>
+            <h2
+              className={`${josefin.className} text-5xl font-bold mb-4 text-black`}
+            >
               Current elementary schools
             </h2>
-            <p className="py-2 font-medium">Schools we pick up from.</p>
-            <ul className="space-y-6 list-none pl-5 pt-8 font-medium">
+            <p className="py-2 font-medium text-black">
+              Schools we pick up from.
+            </p>
+            <ul className="space-y-6 list-none pl-5 pt-8 font-medium text-black">
               <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
                 Bardmoor
               </li>

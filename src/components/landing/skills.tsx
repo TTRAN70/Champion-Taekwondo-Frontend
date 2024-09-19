@@ -126,7 +126,7 @@ export default function Skills() {
                           sizes="10vw"
                         ></Image>
                         <div
-                          className={`${inter.className} text-2xl font-bold mt-2`}
+                          className={`${inter.className} text-black text-2xl font-bold mt-2`}
                         >
                           {skill.title}
                         </div>

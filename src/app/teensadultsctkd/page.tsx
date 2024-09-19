@@ -40,7 +40,9 @@ export default function TeensAdultsCTKD() {
         </div>
       </div>
       <div className="w-full h-64 flex flex-col justify-center items-center px-10 sm:px-20 xl:px-64 gap-y-10 py-20">
-        <h3 className={`${josefin.className} text-4xl font-extrabold`}>
+        <h3
+          className={`${josefin.className} text-black text-4xl font-extrabold`}
+        >
           Strengthen Your Body, Sharpen Your Mind
         </h3>
         <p
@@ -89,10 +91,12 @@ export default function TeensAdultsCTKD() {
           <div
             className={`${inter.className} flex justify-center items-center flex-col pt-20 p-7 pt-20`}
           >
-            <h3 className={`${inter.className} text-4xl font-bold mb-10`}>
+            <h3
+              className={`${inter.className} text-black text-4xl font-bold mb-10`}
+            >
               Find the Champion Within You
             </h3>
-            <p className="text-md font-normal">
+            <p className="text-md font-normal text-black">
               Supportive and inclusive environment - designed to help you
               achieve your goals.
             </p>
@@ -131,13 +135,15 @@ export default function TeensAdultsCTKD() {
           <div className="container lg:w-[60%] mx-auto px-6 sm:px-16 pb-10">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 bg-primary text-primary-foreground p-6 rounded-lg">
-                <h2 className={`${josefin.className} text-4xl font-bold mb-4`}>
+                <h2
+                  className={`${josefin.className} text-black text-4xl font-bold mb-4`}
+                >
                   What to Expect
                 </h2>
-                <p className="py-5 font-medium">
+                <p className="py-5 font-medium text-black">
                   We offer convenient and specialized training
                 </p>
-                <ul className="space-y-6 list-none pl-5 pt-8 font-medium">
+                <ul className="space-y-6 list-none pl-5 pt-8 font-medium text-black">
                   <li className="relative before:absolute before:content-[''] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full before:-left-5 before:top-2">
                     Structured Training
                   </li>
@@ -249,7 +255,9 @@ function ChangesComponent({
           placeholder="blur"
           blurDataURL={src}
         />
-        <h3 className={`self-center text-xl mt-7 font-bold ${inter.className}`}>
+        <h3
+          className={`text-black self-center text-xl mt-7 font-bold ${inter.className}`}
+        >
           {title}
         </h3>
       </div>

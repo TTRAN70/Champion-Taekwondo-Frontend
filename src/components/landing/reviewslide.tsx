@@ -12,7 +12,9 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
               key={elem.person}
               className="basis-[30vw] p-8 rounded-lg flex flex-col justify-start relative bg-altgrey"
             >
-              <p className={`${inter.className} self-start font-semibold`}>
+              <p
+                className={`${inter.className} text-black self-start font-semibold`}
+              >
                 <q>{elem.review}</q>
               </p>
               <div className="text-sm text-slate-700 mb-3">{elem.via}</div>
@@ -30,7 +32,7 @@ export default function ReviewSlide({ previews }: { previews: TReviews }) {
                     height: "40px",
                   }}
                 />
-                <div className="font-bold">{elem.person}</div>
+                <div className="font-bold text-black">{elem.person}</div>
                 <div className="text-sm text-slate-700">{elem.title}</div>
                 <div className="right-5 bottom-8 w-20 h-10 absolute p-1 text-white bg-[#3C84FF] rounded-lg">
                   <Image
