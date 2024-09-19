@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfUse() {
   return (
-    <main className="min-h-screen p-20 lg:px-40 pb-40 flex justify-center flex-col">
+    <main className="min-h-screen p-10 lg:px-40 pb-40 flex justify-center flex-col">
       <div className=" text-4xl font-extrabold mb-20 sm:mx-auto">
         Terms of Use
       </div>

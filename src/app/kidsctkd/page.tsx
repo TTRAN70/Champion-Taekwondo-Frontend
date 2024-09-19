@@ -99,7 +99,7 @@ export default function KidsCTKD() {
               What makes taekwondo for kids so great!
             </p>
           </div>
-          <div className="container lg:w-[60%] mx-auto py-14 px-6 sm:p-16">
+          <div className="container lg:w-[60%] mx-auto py-5 px-6 sm:p-16">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
                 <div

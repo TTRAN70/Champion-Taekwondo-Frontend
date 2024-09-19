@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen p-20 lg:px-40 flex justify-center flex-col">
+    <main className="min-h-screen p-10 lg:px-40 flex justify-center flex-col">
       {privacy.map((elem) => {
         return (
           <div key={elem.title} className="mb-10">
